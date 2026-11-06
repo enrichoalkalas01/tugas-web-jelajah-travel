@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="signin">
+  <div id="site-header"></div>
+
+  <section class="banner"
+    data-image="assets/img/mount-bromo/01.jpg"
+    data-eyebrow="Account"
+    data-title="Sign in to Jelajah.id"
+    data-subtitle="Manage your bookings and get member-only promos."></section>
+
+  <main class="page-main" style="padding-top:48px">
+    <div class="container">
+      <div class="card auth">
+        <div class="auth__visual" style="background-image:url('assets/img/raja-ampat/09.jpg')">
+          <h2>Your trips, tickets and promos in one place.</h2>
+          <p>Members get extra discounts on every booking.</p>
+        </div>
+
+        <div class="auth__form">
+          <div class="tabs" data-toggle-group>
+            <button class="tabs__item is-active" type="button" data-auth="signin">Sign In</button>
+            <button class="tabs__item" type="button" data-auth="signup">Sign Up</button>
+          </div>
+
+          <form data-auth-show="signin" action="my-bookings.html">
+            <h2>Welcome back</h2>
+            <input class="input" type="email" placeholder="Email" required>
+            <input class="input" type="password" placeholder="Password (min. 6 characters)" minlength="6" required>
+            <button class="btn btn--primary btn--lg btn--block" type="submit">Sign In</button>
+          </form>
+
+          <form class="is-hidden" data-auth-show="signup" action="my-bookings.html">
+            <h2>Create an account</h2>
+            <input class="input" type="text" placeholder="Full name" required>
+            <input class="input" type="email" placeholder="Email" required>
+            <input class="input" type="password" placeholder="Password (min. 6 characters)" minlength="6" required>
+            <button class="btn btn--primary btn--lg btn--block" type="submit">Sign Up</button>
+          </form>
+
+          <a class="auth__guest" href="index.html">Continue as guest</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

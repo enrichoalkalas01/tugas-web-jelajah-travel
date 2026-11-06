@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destination — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<!--
+  One page for all 14 destinations: destination-detail.html?d=<slug>
+  Content comes from assets/js/destinations.js (slug = photo folder name in assets/img).
+-->
+<body data-page="destinations">
+  <div id="site-header"></div>
+
+  <section class="banner" id="dest-banner" data-title="Destination"></section>
+
+  <main class="page-main" style="padding-top:28px">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li id="dest-crumb"></li>
+      </ul>
+
+      <div class="gallery" id="dest-gallery"></div>
+
+      <div class="layout-aside-right">
+        <div class="detail">
+          <div class="info-boxes" id="dest-info"></div>
+
+          <h2 class="mt-0">About this place</h2>
+          <p class="text-muted" id="dest-about-en"></p>
+          <p class="text-muted" id="dest-about-id" lang="id"></p>
+
+          <h2>Highlights</h2>
+          <div class="highlights" id="dest-highlights"></div>
+
+          <h2>Facilities</h2>
+          <div class="chips">
+            <span class="tag tag--soft">Parking</span>
+            <span class="tag tag--soft">Toilets</span>
+            <span class="tag tag--soft">Prayer room</span>
+            <span class="tag tag--soft">Food stalls</span>
+            <span class="tag tag--soft">Local guides</span>
+            <span class="tag tag--soft">Souvenir shops</span>
+            <span class="tag tag--soft">First aid</span>
+          </div>
+
+          <h2 id="dest-reviews-title">Reviews</h2>
+          <div class="card review">
+            <span class="avatar bg-coral">RP</span>
+            <div>
+              <div class="review__head"><strong>Rina P.</strong> &middot; 1 week ago <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+              <p>Beautiful place and the ticket was scanned in seconds. Come early to avoid the crowds.</p>
+            </div>
+          </div>
+          <div class="card review">
+            <span class="avatar bg-teal">JW</span>
+            <div>
+              <div class="review__head"><strong>James W.</strong> &middot; 3 weeks ago <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+              <p>Our guide knew every photo spot. Worth booking the tour instead of just the entrance ticket.</p>
+            </div>
+          </div>
+          <div class="card review">
+            <span class="avatar bg-blue">AL</span>
+            <div>
+              <div class="review__head"><strong>Ayu L.</strong> &middot; 1 month ago <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span></div>
+              <p>Stunning views. Bring cash for snacks and wear comfortable shoes.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card booking-box">
+          <h3>Choose your ticket</h3>
+          <label class="option">
+            <input type="radio" name="ticket" checked>
+            <div style="flex:1">
+              <div style="display:flex;justify-content:space-between;gap:8px"><span class="option__title">Entrance ticket</span><span class="price" id="dest-price"></span></div>
+              <div class="option__desc">Valid all day on your chosen date. Instant e-ticket, skip the queue.</div>
+            </div>
+          </label>
+          <label class="option">
+            <input type="radio" name="ticket">
+            <div style="flex:1">
+              <div style="display:flex;justify-content:space-between;gap:8px"><span class="option__title">Full-day guided tour</span><span class="price">Rp 350.000</span></div>
+              <div class="option__desc">Hotel pick-up, local guide, entrance fees and lunch included.</div>
+            </div>
+          </label>
+          <label class="option">
+            <input type="radio" name="ticket">
+            <div style="flex:1">
+              <div style="display:flex;justify-content:space-between;gap:8px"><span class="option__title">2D1N holiday package</span><span class="price">Rp 1.450.000</span></div>
+              <div class="option__desc">Hotel, transport, guide, all tickets and daily breakfast included.</div>
+            </div>
+          </label>
+
+          <label class="label">Visit date</label>
+          <input class="input" type="date" value="2026-11-02" style="margin-bottom:14px">
+
+          <div class="form-grid form-grid--2" style="margin-bottom:14px">
+            <div>
+              <label class="label">Adults</label>
+              <div class="qty" data-min="1"><button type="button" data-qty="-">&minus;</button><span>2</span><button type="button" data-qty="+">+</button></div>
+            </div>
+            <div>
+              <label class="label">Children (&minus;50%)</label>
+              <div class="qty"><button type="button" data-qty="-">&minus;</button><span>0</span><button type="button" data-qty="+">+</button></div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:8px">
+            <input class="input" type="text" placeholder="PROMO CODE">
+            <button class="btn btn--outline" type="button" style="height:46px">Apply</button>
+          </div>
+
+          <hr class="divider">
+          <div class="summary-row"><span>Subtotal</span><strong id="dest-subtotal"></strong></div>
+          <div class="summary-total"><span>Total</span><span id="dest-total"></span></div>
+          <a class="btn btn--primary btn--lg btn--block" id="dest-book" href="order.html">Book now</a>
+          <p class="booking-box__note">Free cancellation up to 24 hours before your visit</p>
+        </aside>
+      </div>
+
+      <section class="section--lg">
+        <h2 class="section-title">You might also like</h2>
+        <div class="grid grid-4" id="dest-related"></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/destinations.js"></script>
+  <script>
+    (function () {
+      var slug = new URLSearchParams(location.search).get("d");
+      var i = DESTINATIONS.findIndex(function (x) { return x.slug === slug; });
+      if (i < 0) i = 0;
+      var d = DESTINATIONS[i];
+
+      function $(id) { return document.getElementById(id); }
+      function rp(n) { return "Rp " + n.toLocaleString("id-ID"); }
+
+      document.title = d.name + " — Jelajah.id";
+
+      // Must run before layout.js, which builds the banner from these data-* attributes.
+      var banner = $("dest-banner").dataset;
+      banner.image = d.photos[0].src;
+      banner.eyebrow = d.category + " · " + d.short;
+      banner.title = d.name;
+      banner.subtitle = "&#9733; " + d.rating + " (" + d.reviews.toLocaleString("en-US") + " reviews) · tickets from " + rp(d.price);
+
+      $("dest-crumb").textContent = d.name;
+
+      $("dest-gallery").innerHTML = d.photos.map(function (p) {
+        return '<figure><img src="' + p.src + '" alt="' + p.caption + '"><figcaption>' + p.caption + "</figcaption></figure>";
+      }).join("");
+
+      $("dest-info").innerHTML = [["Region", d.region], ["Category", d.category], ["Location", d.location]].map(function (r) {
+        return '<div class="card info-box"><small>' + r[0] + "</small><strong>" + r[1] + "</strong></div>";
+      }).join("");
+
+      $("dest-about-en").textContent = d.about.en;
+      $("dest-about-id").textContent = d.about.id;
+
+      $("dest-highlights").innerHTML = d.highlights.map(function (h) {
+        return '<div class="card highlight"><div>' + h.en + '<small lang="id">' + h.id + "</small></div></div>";
+      }).join("");
+
+      $("dest-reviews-title").innerHTML = 'Reviews <span class="rating" style="font-size:26px">' + d.rating +
+        ' <span style="font-size:14px">(' + d.reviews + ")</span></span>";
+
+      $("dest-price").textContent = rp(d.price);
+      $("dest-subtotal").textContent = rp(d.price * 2);
+      $("dest-total").textContent = rp(d.price * 2);
+
+      // Book now carries the selected ticket option to order.html.
+      function updateBook() {
+        var opt = document.querySelector('.booking-box input[name="ticket"]:checked').closest(".option");
+        var title = opt.querySelector(".option__title").textContent;
+        var price = opt.querySelector(".price").textContent.replace(/\D/g, "");
+        $("dest-book").href = "order.html?d=" + d.slug + "&t=" + encodeURIComponent(title) + "&p=" + price;
+      }
+      document.querySelectorAll('.booking-box input[name="ticket"]').forEach(function (r) {
+        r.addEventListener("change", updateBook);
+      });
+      updateBook();
+
+      var related = [];
+      for (var k = 1; k <= 4; k++) related.push(DESTINATIONS[(i + k) % DESTINATIONS.length]);
+      $("dest-related").innerHTML = related.map(function (r) {
+        var img = r.slug === "citarik-river-rafting" ? r.photos[1].src : r.photos[0].src;
+        return '<a class="card dest-card" href="destination-detail.html?d=' + r.slug + '">' +
+          '<img class="dest-card__img" src="' + img + '" alt="' + r.name + '" style="aspect-ratio:242/182">' +
+          '<div class="dest-card__body">' +
+            '<div class="dest-card__meta">' + r.type + " &middot; " + r.short + "</div>" +
+            '<h3 class="dest-card__title">' + r.name + "</h3>" +
+            '<div class="price-from">from <span class="price">' + rp(r.price) + "</span></div>" +
+          "</div></a>";
+      }).join("");
+    })();
+  </script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

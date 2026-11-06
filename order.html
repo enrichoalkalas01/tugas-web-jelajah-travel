@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete your order — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="bookings">
+  <div id="site-header"></div>
+
+  <section class="banner"
+    data-image="assets/img/borobudur-temple/01.jpg"
+    data-eyebrow="Order · Step 2 of 3"
+    data-title="Complete your order"
+    data-subtitle="Borobudur Temple · Entrance ticket"></section>
+
+  <main class="page-main">
+    <div class="container">
+      <div class="steps">
+        <div class="step is-done"><span class="step__num">1</span> Choose ticket</div>
+        <span class="step-line"></span>
+        <div class="step is-active"><span class="step__num">2</span> Details &amp; payment</div>
+        <span class="step-line"></span>
+        <div class="step"><span class="step__num">3</span> E-ticket</div>
+        <span class="step-line"></span>
+      </div>
+
+      <form class="layout-aside-right" action="e-ticket.html">
+        <div>
+          <div class="card card-pad" style="margin-bottom:24px">
+            <h2 class="card__title">Contact details</h2>
+            <p class="text-muted" style="font-size:13px">Your e-ticket will be sent to this email.</p>
+            <div class="form-grid">
+              <input class="input" type="text" placeholder="Full name (as on ID)" required>
+              <input class="input" type="email" placeholder="Email" required>
+              <input class="input" type="tel" placeholder="Phone / WhatsApp" required>
+              <select class="select">
+                <option>Indonesia</option>
+                <option>Malaysia</option>
+                <option>Singapore</option>
+                <option>Other</option>
+              </select>
+              <textarea class="textarea span-all" placeholder="Special requests (optional)"></textarea>
+            </div>
+          </div>
+
+          <div class="card card-pad">
+            <h2 class="card__title">Payment method</h2>
+            <div class="form-grid" style="margin-bottom:20px">
+              <label class="option">
+                <input type="radio" name="payment" checked>
+                <div><div class="option__title">Bank transfer</div><div class="option__desc">Virtual Account BCA, BNI, BRI, Mandiri</div></div>
+              </label>
+              <label class="option">
+                <input type="radio" name="payment">
+                <div><div class="option__title">Credit / debit card</div><div class="option__desc">Visa, Mastercard, JCB</div></div>
+              </label>
+              <label class="option">
+                <input type="radio" name="payment">
+                <div><div class="option__title">E-wallet</div><div class="option__desc">GoPay, OVO, DANA, ShopeePay</div></div>
+              </label>
+              <label class="option">
+                <input type="radio" name="payment">
+                <div><div class="option__title">QRIS</div><div class="option__desc">Scan with any banking app</div></div>
+              </label>
+            </div>
+            <label class="check">
+              <input type="checkbox" required>
+              <span>I agree to the <a href="terms-conditions.html">Terms &amp; Conditions</a> and <a href="refund-policy.html">Refund Policy</a></span>
+            </label>
+          </div>
+        </div>
+
+        <aside class="card order-summary">
+          <img id="order-img" src="assets/img/borobudur-temple/01.jpg" alt="Borobudur Temple">
+          <div class="order-summary__body">
+            <h3 id="order-name" style="font-size:19px;margin-bottom:6px">Borobudur Temple</h3>
+            <p id="order-ticket" class="text-muted" style="font-size:14px;margin-bottom:10px">Entrance ticket</p>
+            <div class="summary-row"><span>Visit date</span><strong>Mon, 2 Nov 2026</strong></div>
+            <div class="summary-row"><span>Guests</span><strong>2 adults</strong></div>
+            <hr class="divider">
+            <div class="summary-row"><span>Subtotal</span><strong id="order-subtotal">Rp 100.000</strong></div>
+            <div class="summary-total"><span>Total</span><span class="price" id="order-total">Rp 100.000</span></div>
+            <button class="btn btn--primary btn--lg btn--block" type="submit" id="order-pay">Pay Rp 100.000</button>
+            <a class="auth__guest" id="order-back" href="destination-detail.html?d=borobudur-temple">&larr; Change ticket</a>
+          </div>
+        </aside>
+      </form>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/destinations.js"></script>
+  <script>
+    // Fill the summary from ?d=<slug>&t=<ticket>&p=<price per person> (sent by tickets / destination pages).
+    (function () {
+      var q = new URLSearchParams(location.search);
+      var d = DESTINATIONS.filter(function (x) { return x.slug === q.get("d"); })[0];
+      if (!d) return;
+      var price = Number(q.get("p")) || d.price;
+      var total = "Rp " + (price * 2).toLocaleString("id-ID");
+      var banner = document.querySelector(".banner").dataset;
+      banner.image = d.photos[0].src;
+      banner.subtitle = d.name + " · " + (q.get("t") || "Entrance ticket");
+      var img = document.getElementById("order-img");
+      img.src = d.photos[0].src;
+      img.alt = d.name;
+      document.getElementById("order-name").textContent = d.name;
+      document.getElementById("order-ticket").textContent = q.get("t") || "Entrance ticket";
+      document.getElementById("order-subtotal").textContent = total;
+      document.getElementById("order-total").textContent = total;
+      document.getElementById("order-pay").textContent = "Pay " + total;
+      document.getElementById("order-back").href = "destination-detail.html?d=" + d.slug;
+    })();
+  </script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

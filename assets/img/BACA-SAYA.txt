@@ -1,0 +1,4 @@
+Paket foto Extours
+Berisi 28 foto pilihan: 2 foto untuk setiap destinasi pada dokumen “Image and Data Description for Website”.
+Foto dikelompokkan menurut folder destinasi. Periksa ATRIBUSI-FOTO.csv untuk nama fotografer, sumber, dan lisensi setiap foto.
+Perhatikan ketentuan lisensi sebelum memakai atau mengubah foto di website.

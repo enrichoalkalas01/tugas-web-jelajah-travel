@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TODO: page title -->
+  <title>Page Title — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<!--
+  HOW TO USE
+  1. Copy this file and rename it (e.g. "my-page.html").
+  2. Set data-page on <body> to highlight the active nav item:
+     home | destinations | tickets | bookings | about  (any other value = no highlight)
+  3. Fill the banner data-* attributes. Banner size modifiers:
+     (none) = 328px, "banner--md" = 386px, "banner--home" = 630px
+  4. Put page content inside <main>. Do NOT write header/footer markup by hand —
+     they are rendered by assets/js/layout.js. To change nav/footer links, edit the arrays there.
+  5. Page-specific styles go into assets/css/style.css (section 8), not inline <style>.
+-->
+<body data-page="">
+  <div id="site-header"></div>
+
+  <section class="banner"
+    data-image="assets/img/raja-ampat/09.jpg"
+    data-eyebrow="Eyebrow text"
+    data-title="Page heading"
+    data-subtitle="Short description under the heading."></section>
+
+  <main class="page-main">
+    <div class="container">
+
+      <!-- Optional breadcrumb -->
+      <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li>Current page</li>
+      </ul>
+
+      <section class="section">
+        <h2 class="section-title">Section title</h2>
+
+        <div class="grid grid-3">
+          <div class="card card-pad">
+            <h3 class="card__title">Card title</h3>
+            <p class="text-muted">Card content.</p>
+            <a class="btn btn--primary" href="#">Primary button</a>
+          </div>
+          <div class="card card-pad">
+            <h3 class="card__title">Card title</h3>
+            <p class="text-muted">Card content.</p>
+            <a class="btn btn--outline" href="#">Outline button</a>
+          </div>
+          <div class="card card-pad">
+            <h3 class="card__title">Card title</h3>
+            <p class="text-muted">Card content.</p>
+            <span class="tag tag--soft">Tag</span>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        COMPONENT CHEAT SHEET (all defined in assets/css/style.css)
+
+        Layout     : .container  .section  .section--lg  .grid .grid-2/.grid-3/.grid-4
+                     .layout-sidebar (260px | content)  .layout-aside-right (content | 320px)
+        Heading    : .section-title  .section-head (title + .link-arrow on the right)
+        Card       : .card  .card-pad  .card__title
+        Buttons    : .btn + .btn--primary | .btn--outline | .btn--white | .btn--ghost-white
+                     sizes .btn--sm | .btn--lg   width .btn--block   text-only .btn-link
+        Form       : .input  .select  .textarea  .label  .check   grid: .form-grid / .form-grid--2
+        Tags       : .tag--entrance | .tag--day | .tag--holiday | .tag--success | .tag--soft
+        Price      : .price  .price-from  .price-unit  .price-old + .price-off  .rating  .stars
+        Cards      : .dest-card  .list-card  .deal-card  .post-card  .feature  .testimonial
+        Tabs/chips : wrap in [data-toggle-group] → .tabs > .tabs__item  or  .chips > .chip
+        Accordion  : .accordion > .card.accordion__item > .accordion__head + .accordion__body
+        Quantity   : <div class="qty"><button data-qty="-">−</button><span>0</span><button data-qty="+">+</button></div>
+        Copy text  : <button data-copy="TEXT">Copy</button>
+        CTA        : .cta-band (gradient banner)  .inline-cta (white box + button)
+        Legal nav  : <aside data-legal-nav="privacy|terms|refund"></aside>
+        Colors     : .bg-coral .bg-teal .bg-blue .bg-purple   utilities: .text-center .text-muted .mt-lg
+      -->
+
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="destinations">
+  <div id="site-header"></div>
+
+  <section class="banner banner--md"
+    data-image="assets/img/labuan-bajo-komodo/01.jpg"
+    data-eyebrow="Destinations"
+    data-title="Explore the best places in Indonesia"
+    data-subtitle="Beaches, volcanoes, temples and national parks — all with instant e-tickets."></section>
+
+  <main class="page-main">
+    <div class="container layout-sidebar">
+      <aside class="card filter">
+        <h3 class="filter__title">Search</h3>
+        <input class="input" type="text" placeholder="Destination or city...">
+
+        <h3 class="filter__title">Region</h3>
+        <label class="check"><input type="radio" name="region" checked> All regions</label>
+        <label class="check"><input type="radio" name="region"> Bali &amp; Nusa Tenggara</label>
+        <label class="check"><input type="radio" name="region"> Java</label>
+        <label class="check"><input type="radio" name="region"> Sumatra</label>
+        <label class="check"><input type="radio" name="region"> Sulawesi</label>
+        <label class="check"><input type="radio" name="region"> Papua &amp; Maluku</label>
+
+        <h3 class="filter__title">Type of place</h3>
+        <label class="check"><input type="checkbox"> Beach <small>5</small></label>
+        <label class="check"><input type="checkbox"> Mountain <small>4</small></label>
+        <label class="check"><input type="checkbox"> Nature <small>2</small></label>
+        <label class="check"><input type="checkbox"> Culture <small>3</small></label>
+
+        <div class="filter__price">
+          <h3 class="filter__title">Max ticket price</h3>
+          <strong>Rp 500.000</strong>
+        </div>
+        <input type="range" min="0" max="500000" value="500000" step="10000">
+
+        <button class="btn btn--outline btn--block mt-lg" style="margin-top:24px" type="reset">Reset filters</button>
+      </aside>
+
+      <section>
+        <div class="toolbar">
+          <h2>14 destinations found</h2>
+          <select class="select">
+            <option>Sort: Most popular</option>
+            <option>Sort: Highest rated</option>
+            <option>Sort: Price low to high</option>
+            <option>Sort: Price high to low</option>
+          </select>
+        </div>
+
+        <div class="grid grid-3">
+          <a class="card dest-card" href="destination-detail.html?d=borobudur-temple">
+            <span class="dest-card__type">Culture</span>
+            <img class="dest-card__img" src="assets/img/borobudur-temple/01.jpg" alt="Borobudur Temple">
+            <div class="dest-card__body">
+              <div class="dest-card__meta">Magelang, Central Java</div>
+              <h3 class="dest-card__title">Borobudur Temple</h3>
+              <div class="rating">4.88 <span>(5120)</span></div>
+              <div class="price-from">from <span class="price">Rp 50.000</span> <span class="price-unit">/ person</span></div>
+            </div>
+          </a>
+          <a class="card dest-card" href="destination-detail.html?d=ubud-tegallalang">
+            <span class="dest-card__type">Culture</span>
+            <img class="dest-card__img" src="assets/img/ubud-tegallalang/14.jpg" alt="Ubud &amp; Tegallalang">
+            <div class="dest-card__body">
+              <div class="dest-card__meta">Gianyar, Bali</div>
+              <h3 class="dest-card__title">Ubud &amp; Tegallalang</h3>
+              <div class="rating">4.87 <span>(4290)</span></div>
+              <div class="price-from">from <span class="price">Rp 15.000</span> <span class="price-unit">/ person</span></div>
+            </div>
+          </a>
+          <a class="card dest-card" href="destination-detail.html?d=mount-bromo">
+            <span class="ribbon"><span>-20%</span></span>
+            <span class="dest-card__type">Mountain</span>
+            <img class="dest-card__img" src="assets/img/mount-bromo/01.jpg" alt="Mount Bromo">
+            <div class="dest-card__body">
+              <div class="dest-card__meta">Bromo Tengger Semeru, East Java</div>
+              <h3 class="dest-card__title">Mount Bromo</h3>
+              <div class="rating">4.92 <span>(3310)</span></div>
+              <div class="price-from">from <span class="price">Rp 28.000</span> <span class="price-unit">/ person</span></div>
+            </div>
+          </a>
+          <a class="card dest-card" href="destination-detail.html?d=gili-islands">
+            <span class="dest-card__type">Beach</span>
+            <img class="dest-card__img" src="assets/img/gili-islands/01.jpg" alt="Gili Islands">
+            <div class="dest-card__body">
+              <div class="dest-card__meta">North Lombok, West Nusa Tenggara</div>
+              <h3 class="dest-card__title">Gili Islands</h3>
+              <div class="rating">4.89 <span>(2650)</span></div>
+              <div class="price-from">from <span class="price">Rp 15.000</span> <span class="price-unit">/ person</span></div>
+            </div>
+          </a>
+          <a class="card dest-card" href="destination-detail.html?d=nusa-penida-kelingking">
+            <span class="dest-card__type">Beach</span>
+            <img class="dest-card__img" src="assets/img/nusa-penida-kelingking/02.jpg" alt="Nusa Penida &amp; Kelingking">
+            <div class="dest-card__body">
+              <div class="dest-card__meta">Klungkung, Bali</div>
+              <h3 class="dest-card__title">Nusa Penida &amp; Kelingking</h3>
+              <div class="rating">4.96 <span>(2140)</span></div>
+              <div class="price-from">from <span class="price">Rp 25.000</span> <span class="price-unit">/ person</span></div>
+            </div>
+          </a>
+          <a class="card dest-card" href="destination-detail.html?d=kawah-ijen">
+            <span class="ribbon"><span>-15%</span></span>
+            <span class="dest-card__type">Mountain</span>
+            <img class="dest-card__img" src="assets/img/kawah-ijen/02.jpg" alt="Kawah Ijen">
+            <div class="dest-card__body">
+              <div class="dest-card__meta">Banyuwangi, East Java</div>
+              <h3 class="dest-card__title">Kawah Ijen</h3>
+              <div class="rating">4.93 <span>(1890)</span></div>
+              <div class="price-from">from <span class="price">Rp 85.000</span> <span class="price-unit">/ person</span></div>
+            </div>
+          </a>
+          <a class="card dest-card" href="destination-detail.html?d=labuan-bajo-komodo">
+            <span class="ribbon"><span>-15%</span></span>
+            <span class="dest-card__type">Beach</span>
+            <img class="dest-card__img" src="assets/img/labuan-bajo-komodo/01.jpg" alt="Labuan Bajo &amp; Komodo">
+            <div class="dest-card__body">
+              <div class="dest-card__meta">West Manggarai, East Nusa Tenggara</div>
+              <h3 class="dest-card__title">Labuan Bajo &amp; Komodo</h3>
+              <div class="rating">4.95 <span>(1720)</span></div>
+              <div class="price-from">from <span class="price">Rp 127.500</span> <span class="price-unit">/ person</span></div>
+            </div>
+          </a>
+          <a class="card dest-card" href="destination-detail.html?d=lake-toba">
+            <span class="dest-card__type">Nature</span>
+            <img class="dest-card__img" src="assets/img/lake-toba/01.jpg" alt="Lake Toba">
+            <div class="dest-card__body">
+              <div class="dest-card__meta">Samosir, North Sumatra</div>
+              <h3 class="dest-card__title">Lake Toba</h3>
+              <div class="rating">4.84 <span>(1180)</span></div>
+              <div class="price-from">from <span class="price">Rp 20.000</span> <span class="price-unit">/ person</span></div>
+            </div>
+          </a>
+          <a class="card dest-card" href="destination-detail.html?d=dieng-plateau">
+            <span class="dest-card__type">Mountain</span>
+            <img class="dest-card__img" src="assets/img/dieng-plateau/01.jpg" alt="Dieng Plateau">
+            <div class="dest-card__body">
+              <div class="dest-card__meta">Wonosobo, Central Java</div>
+              <h3 class="dest-card__title">Dieng Plateau</h3>
+              <div class="rating">4.80 <span>(980)</span></div>
+              <div class="price-from">from <span class="price">Rp 25.000</span> <span class="price-unit">/ person</span></div>
+            </div>
+          </a>
+          <a class="card dest-card" href="destination-detail.html?d=mount-rinjani">
+            <span class="dest-card__type">Mountain</span>
+            <img class="dest-card__img" src="assets/img/mount-rinjani/01.jpg" alt="Mount Rinjani">
+            <div class="dest-card__body">
+              <div class="dest-card__meta">Lombok, West Nusa Tenggara</div>
+              <h3 class="dest-card__title">Mount Rinjani</h3>
+              <div class="rating">4.90 <span>(940)</span></div>
+              <div class="price-from">from <span class="price">Rp 150.000</span> <span class="price-unit">/ person</span></div>
+            </div>
+          </a>
+          <a class="card dest-card" href="destination-detail.html?d=raja-ampat">
+            <span class="ribbon"><span>-10%</span></span>
+            <span class="dest-card__type">Beach</span>
+            <img class="dest-card__img" src="assets/img/raja-ampat/09.jpg" alt="Raja Ampat">
+            <div class="dest-card__body">
+              <div class="dest-card__meta">Southwest Papua</div>
+              <h3 class="dest-card__title">Raja Ampat</h3>
+              <div class="rating">4.98 <span>(860)</span></div>
+              <div class="price-from">from <span class="price">Rp 450.000</span> <span class="price-unit">/ person</span></div>
+            </div>
+          </a>
+          <a class="card dest-card" href="destination-detail.html?d=citarik-river-rafting">
+            <span class="ribbon"><span>-10%</span></span>
+            <span class="dest-card__type">Nature</span>
+            <img class="dest-card__img" src="assets/img/citarik-river-rafting/02.jpg" alt="Citarik River Rafting">
+            <div class="dest-card__body">
+              <div class="dest-card__meta">Sukabumi, West Java</div>
+              <h3 class="dest-card__title">Citarik River Rafting</h3>
+              <div class="rating">4.82 <span>(760)</span></div>
+              <div class="price-from">from <span class="price">Rp 225.000</span> <span class="price-unit">/ person</span></div>
+            </div>
+          </a>
+          <a class="card dest-card" href="destination-detail.html?d=bunaken-marine-park">
+            <span class="dest-card__type">Beach</span>
+            <img class="dest-card__img" src="assets/img/bunaken-marine-park/01.jpg" alt="Bunaken Marine Park">
+            <div class="dest-card__body">
+              <div class="dest-card__meta">Manado, North Sulawesi</div>
+              <h3 class="dest-card__title">Bunaken Marine Park</h3>
+              <div class="rating">4.91 <span>(610)</span></div>
+              <div class="price-from">from <span class="price">Rp 150.000</span> <span class="price-unit">/ person</span></div>
+            </div>
+          </a>
+          <a class="card dest-card" href="destination-detail.html?d=tana-toraja">
+            <span class="dest-card__type">Culture</span>
+            <img class="dest-card__img" src="assets/img/tana-toraja/04.jpg" alt="Tana Toraja">
+            <div class="dest-card__body">
+              <div class="dest-card__meta">Tana Toraja, South Sulawesi</div>
+              <h3 class="dest-card__title">Tana Toraja</h3>
+              <div class="rating">4.86 <span>(520)</span></div>
+              <div class="price-from">from <span class="price">Rp 30.000</span> <span class="price-unit">/ person</span></div>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

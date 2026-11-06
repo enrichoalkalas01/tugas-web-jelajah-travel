@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jelajah.id — Discover Indonesia</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body data-page="home">
+        <div id="site-header"></div>
+
+        <section
+            class="banner banner--home"
+            data-image="assets/img/raja-ampat/09.jpg"
+            data-title="Discover the most beautiful places in Indonesia"
+            data-subtitle="Find destinations, buy entrance tickets and book tour packages in minutes."
+        >
+            <form class="banner-search" action="destinations.html">
+                <select name="q">
+                    <option value="">Where do you want to go?</option>
+                    <option>Bali &amp; Nusa Tenggara</option>
+                    <option>Java</option>
+                    <option>Sumatra</option>
+                    <option>Sulawesi</option>
+                    <option>Papua &amp; Maluku</option>
+                </select>
+                <button class="btn btn--primary btn--lg" type="submit">
+                    Search
+                </button>
+            </form>
+        </section>
+
+        <main>
+            <!-- Categories -->
+            <section class="section--lg">
+                <div class="container">
+                    <h2 class="section-title">
+                        Where Will Your Next Holiday Be?
+                    </h2>
+                    <div class="cat-grid">
+                        <div
+                            class="cat-hero"
+                            style="
+                                background-image: url(&quot;assets/img/lake-toba/01.jpg&quot;);
+                            "
+                        >
+                            <p class="cat-hero__eyebrow">
+                                over 140 destinations
+                            </p>
+                            <h3 class="cat-hero__title">
+                                Find and book your dream trip.
+                            </h3>
+                            <a
+                                class="btn btn--ghost-white btn--lg"
+                                href="destinations.html"
+                                >View</a
+                            >
+                        </div>
+                        <a class="cat-card" href="destinations.html">
+                            <img
+                                src="assets/img/nusa-penida-kelingking/02.jpg"
+                                alt="Beach & Island"
+                            />
+                            <div class="cat-card__label bg-coral">
+                                <div>
+                                    <strong>Beach &amp; Island</strong
+                                    ><small>5 destinations</small>
+                                </div>
+                                <span class="cat-card__arrow">&rsaquo;</span>
+                            </div>
+                        </a>
+                        <a class="cat-card" href="destinations.html">
+                            <img src="assets/img/mount-rinjani/01.jpg" alt="Mountain" />
+                            <div class="cat-card__label bg-teal">
+                                <div>
+                                    <strong>Mountain</strong
+                                    ><small>4 destinations</small>
+                                </div>
+                                <span class="cat-card__arrow">&rsaquo;</span>
+                            </div>
+                        </a>
+                        <a class="cat-card" href="destinations.html">
+                            <img
+                                src="assets/img/borobudur-temple/09.jpg"
+                                alt="Culture & Temple"
+                            />
+                            <div class="cat-card__label bg-blue">
+                                <div>
+                                    <strong>Culture &amp; Temple</strong
+                                    ><small>3 destinations</small>
+                                </div>
+                                <span class="cat-card__arrow">&rsaquo;</span>
+                            </div>
+                        </a>
+                        <a class="cat-card" href="destinations.html">
+                            <img src="assets/img/dieng-plateau/01.jpg" alt="Show all" />
+                            <div class="cat-card__label bg-purple">
+                                <div>
+                                    <strong>Show All</strong
+                                    ><small>+1 categories</small>
+                                </div>
+                                <span class="cat-card__arrow">&#8964;</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Popular destinations -->
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Popular destinations</h2>
+                    <div
+                        class="tabs"
+                        data-toggle-group
+                        style="margin-bottom: 40px"
+                    >
+                        <button class="tabs__item is-active">Popular</button>
+                        <button class="tabs__item">Newest</button>
+                    </div>
+
+                    <div class="grid grid-4">
+                        <a
+                            class="card dest-card"
+                            href="destination-detail.html?d=borobudur-temple"
+                        >
+                            <img
+                                class="dest-card__img"
+                                src="assets/img/borobudur-temple/01.jpg"
+                                alt="Borobudur Temple"
+                            />
+                            <div class="dest-card__body">
+                                <div class="dest-card__meta">
+                                    Culture &middot; Magelang, Central Java
+                                </div>
+                                <h3 class="dest-card__title">
+                                    Borobudur Temple
+                                </h3>
+                                <div class="rating">
+                                    4.88 <span>(5120)</span>
+                                </div>
+                                <div class="price-from">
+                                    from <span class="price">Rp 50.000</span>
+                                    <span class="price-unit">/ person</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a
+                            class="card dest-card"
+                            href="destination-detail.html?d=ubud-tegallalang"
+                        >
+                            <img
+                                class="dest-card__img"
+                                src="assets/img/ubud-tegallalang/14.jpg"
+                                alt="Ubud &amp; Tegallalang"
+                            />
+                            <div class="dest-card__body">
+                                <div class="dest-card__meta">
+                                    Culture &middot; Gianyar, Bali
+                                </div>
+                                <h3 class="dest-card__title">
+                                    Ubud &amp; Tegallalang
+                                </h3>
+                                <div class="rating">
+                                    4.87 <span>(4290)</span>
+                                </div>
+                                <div class="price-from">
+                                    from <span class="price">Rp 15.000</span>
+                                    <span class="price-unit">/ person</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a
+                            class="card dest-card"
+                            href="destination-detail.html?d=mount-bromo"
+                        >
+                            <span class="ribbon"><span>-20%</span></span>
+                            <img
+                                class="dest-card__img"
+                                src="assets/img/mount-bromo/01.jpg"
+                                alt="Mount Bromo"
+                            />
+                            <div class="dest-card__body">
+                                <div class="dest-card__meta">
+                                    Mountain &middot; Bromo Tengger Semeru, East Java
+                                </div>
+                                <h3 class="dest-card__title">Mount Bromo</h3>
+                                <div class="rating">
+                                    4.92 <span>(3310)</span>
+                                </div>
+                                <div class="price-from">
+                                    from <span class="price">Rp 28.000</span>
+                                    <span class="price-unit">/ person</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a
+                            class="card dest-card"
+                            href="destination-detail.html?d=gili-islands"
+                        >
+                            <img
+                                class="dest-card__img"
+                                src="assets/img/gili-islands/01.jpg"
+                                alt="Gili Islands"
+                            />
+                            <div class="dest-card__body">
+                                <div class="dest-card__meta">
+                                    Beach &middot; North Lombok, West Nusa Tenggara
+                                </div>
+                                <h3 class="dest-card__title">Gili Islands</h3>
+                                <div class="rating">
+                                    4.89 <span>(2650)</span>
+                                </div>
+                                <div class="price-from">
+                                    from <span class="price">Rp 15.000</span>
+                                    <span class="price-unit">/ person</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a
+                            class="card dest-card"
+                            href="destination-detail.html?d=nusa-penida-kelingking"
+                        >
+                            <img
+                                class="dest-card__img"
+                                src="assets/img/nusa-penida-kelingking/02.jpg"
+                                alt="Nusa Penida &amp; Kelingking"
+                            />
+                            <div class="dest-card__body">
+                                <div class="dest-card__meta">
+                                    Beach &middot; Klungkung, Bali
+                                </div>
+                                <h3 class="dest-card__title">Nusa Penida &amp; Kelingking</h3>
+                                <div class="rating">
+                                    4.96 <span>(2140)</span>
+                                </div>
+                                <div class="price-from">
+                                    from <span class="price">Rp 25.000</span>
+                                    <span class="price-unit">/ person</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a
+                            class="card dest-card"
+                            href="destination-detail.html?d=kawah-ijen"
+                        >
+                            <span class="ribbon"><span>-15%</span></span>
+                            <img
+                                class="dest-card__img"
+                                src="assets/img/kawah-ijen/02.jpg"
+                                alt="Kawah Ijen"
+                            />
+                            <div class="dest-card__body">
+                                <div class="dest-card__meta">
+                                    Mountain &middot; Banyuwangi, East Java
+                                </div>
+                                <h3 class="dest-card__title">Kawah Ijen</h3>
+                                <div class="rating">
+                                    4.93 <span>(1890)</span>
+                                </div>
+                                <div class="price-from">
+                                    from <span class="price">Rp 85.000</span>
+                                    <span class="price-unit">/ person</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a
+                            class="card dest-card"
+                            href="destination-detail.html?d=labuan-bajo-komodo"
+                        >
+                            <span class="ribbon"><span>-15%</span></span>
+                            <img
+                                class="dest-card__img"
+                                src="assets/img/labuan-bajo-komodo/01.jpg"
+                                alt="Labuan Bajo &amp; Komodo"
+                            />
+                            <div class="dest-card__body">
+                                <div class="dest-card__meta">
+                                    Beach &middot; West Manggarai, East Nusa Tenggara
+                                </div>
+                                <h3 class="dest-card__title">
+                                    Labuan Bajo &amp; Komodo
+                                </h3>
+                                <div class="rating">
+                                    4.95 <span>(1720)</span>
+                                </div>
+                                <div class="price-from">
+                                    from <span class="price">Rp 127.500</span>
+                                    <span class="price-unit">/ person</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a
+                            class="card dest-card"
+                            href="destination-detail.html?d=lake-toba"
+                        >
+                            <img
+                                class="dest-card__img"
+                                src="assets/img/lake-toba/01.jpg"
+                                alt="Lake Toba"
+                            />
+                            <div class="dest-card__body">
+                                <div class="dest-card__meta">
+                                    Nature &middot; Samosir, North Sumatra
+                                </div>
+                                <h3 class="dest-card__title">Lake Toba</h3>
+                                <div class="rating">
+                                    4.84 <span>(1180)</span>
+                                </div>
+                                <div class="price-from">
+                                    from <span class="price">Rp 20.000</span>
+                                    <span class="price-unit">/ person</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="text-center mt-lg">
+                        <a
+                            class="btn btn--outline btn--lg"
+                            href="destinations.html"
+                            >Show more</a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why travel with us -->
+            <section class="section--lg">
+                <div class="container">
+                    <h2 class="section-title">Why Travel With Jelajah.id</h2>
+                    <div class="grid grid-4">
+                        <div class="card feature">
+                            <div class="feature__icon bg-coral">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M20.59 13.41 13.42 20.58a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+                                    />
+                                    <circle cx="7" cy="7" r="1.5" />
+                                </svg>
+                            </div>
+                            <h3>Best price guarantee</h3>
+                            <p>
+                                Found it cheaper elsewhere? We refund the
+                                difference, no questions asked.
+                            </p>
+                        </div>
+                        <div class="card feature">
+                            <div class="feature__icon bg-teal">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M3 7h18v4a2 2 0 0 0 0 4v4H3v-4a2 2 0 0 0 0-4z"
+                                    />
+                                    <path d="M13 7v12" stroke-dasharray="2 2" />
+                                </svg>
+                            </div>
+                            <h3>Instant e-ticket</h3>
+                            <p>
+                                Your ticket arrives by email and in My Bookings
+                                right after payment.
+                            </p>
+                        </div>
+                        <div class="card feature">
+                            <div class="feature__icon bg-blue">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M3 12a9 9 0 1 0 3-6.7" />
+                                    <path d="M3 4v5h5" />
+                                </svg>
+                            </div>
+                            <h3>Free cancellation</h3>
+                            <p>
+                                Plans changed? Cancel up to 24 hours before your
+                                visit for a full refund.
+                            </p>
+                        </div>
+                        <div class="card feature">
+                            <div class="feature__icon bg-purple">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"
+                                    />
+                                </svg>
+                            </div>
+                            <h3>24/7 travel support</h3>
+                            <p>
+                                Our team is on WhatsApp, chat and phone day and
+                                night, wherever you are.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ticket deals -->
+            <section class="section">
+                <div class="container">
+                    <div class="section-head">
+                        <h2 class="section-title">Best Ticket Deals</h2>
+                        <a class="link-arrow" href="tickets.html"
+                            >See all tickets</a
+                        >
+                    </div>
+                    <div class="grid grid-2">
+                        <div class="card deal-card">
+                            <img src="assets/img/mount-bromo/01.jpg" alt="Mount Bromo" />
+                            <div class="deal-card__body">
+                                <span class="tag tag--day">Day tour</span>
+                                <h3>Mount Bromo</h3>
+                                <p>Full-day guided tour</p>
+                                <span class="price">Rp 360.000</span>
+                            </div>
+                            <div class="deal-card__action">
+                                <a class="btn btn--primary btn--sm" href="destination-detail.html?d=mount-bromo">Book</a>
+                            </div>
+                        </div>
+                        <div class="card deal-card">
+                            <img src="assets/img/gili-islands/01.jpg" alt="Gili Islands" />
+                            <div class="deal-card__body">
+                                <span class="tag tag--entrance">Entrance ticket</span>
+                                <h3>Gili Islands</h3>
+                                <p>Free entry + harbour fee</p>
+                                <span class="price">Rp 15.000</span>
+                            </div>
+                            <div class="deal-card__action">
+                                <a class="btn btn--primary btn--sm" href="destination-detail.html?d=gili-islands">Book</a>
+                            </div>
+                        </div>
+                        <div class="card deal-card">
+                            <img src="assets/img/nusa-penida-kelingking/02.jpg" alt="Nusa Penida &amp; Kelingking" />
+                            <div class="deal-card__body">
+                                <span class="tag tag--holiday">Holiday package</span>
+                                <h3>Nusa Penida &amp; Kelingking</h3>
+                                <p>3D2N holiday package</p>
+                                <span class="price">Rp 2.900.000</span>
+                            </div>
+                            <div class="deal-card__action">
+                                <a class="btn btn--primary btn--sm" href="destination-detail.html?d=nusa-penida-kelingking">Book</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Promo -->
+            <section class="section--lg">
+                <div class="container">
+                    <div class="cta-band">
+                        <div>
+                            <p class="cta-band__eyebrow">
+                                Limited promo &middot; until 31 December
+                            </p>
+                            <h2 class="cta-band__title">
+                                Extra 10% off every booking
+                            </h2>
+                        </div>
+                        <div class="btn-row" style="margin: 0">
+                            <span class="promo-code">JELAJAH10</span>
+                            <button
+                                class="btn btn--white btn--lg"
+                                data-copy="JELAJAH10"
+                            >
+                                Copy code
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">What Travellers Say</h2>
+                    <div class="grid grid-3">
+                        <div class="card testimonial">
+                            <div class="stars">
+                                &#9733;&#9733;&#9733;&#9733;&#9733;
+                            </div>
+                            <p>
+                                &ldquo;The jeep picked us up at 3 AM right on
+                                time and the sunrise was unreal. Booking took
+                                two minutes.&rdquo;
+                            </p>
+                            <div class="person">
+                                <span class="avatar bg-coral">MR</span>
+                                <div>
+                                    <strong>Maya Rahmawati</strong
+                                    ><small
+                                        >Mount Bromo &middot; Day tour</small
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card testimonial">
+                            <div class="stars">
+                                &#9733;&#9733;&#9733;&#9733;&#9733;
+                            </div>
+                            <p>
+                                &ldquo;Hotel, boat, guide and all tickets in one
+                                package. Everything was organised
+                                perfectly.&rdquo;
+                            </p>
+                            <div class="person">
+                                <span class="avatar bg-teal">DK</span>
+                                <div>
+                                    <strong>Daniel Kusuma</strong
+                                    ><small
+                                        >Labuan Bajo &middot; Holiday
+                                        package</small
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card testimonial">
+                            <div class="stars">
+                                &#9733;&#9733;&#9733;&#9733;&#9733;
+                            </div>
+                            <p>
+                                &ldquo;Kelingking Beach is even better in
+                                person. The e-ticket made the harbour check-in
+                                super quick.&rdquo;
+                            </p>
+                            <div class="person">
+                                <span class="avatar bg-blue">AS</span>
+                                <div>
+                                    <strong>Aisyah Saputri</strong
+                                    ><small
+                                        >Nusa Penida &middot; Day tour</small
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ preview -->
+            <section class="section--lg">
+                <div class="container">
+                    <div class="section-head">
+                        <h2 class="section-title">
+                            Frequently Asked Questions
+                        </h2>
+                        <a class="link-arrow" href="faqs.html">See all FAQs</a>
+                    </div>
+                    <div class="accordion">
+                        <div class="card accordion__item is-open">
+                            <button class="accordion__head">
+                                How do I receive my ticket?
+                            </button>
+                            <div class="accordion__body">
+                                Right after payment your e-ticket is sent to
+                                your email and saved in My Bookings. Show the
+                                booking code at the entrance &mdash; no printing
+                                needed.
+                            </div>
+                        </div>
+                        <div class="card accordion__item">
+                            <button class="accordion__head">
+                                Can I cancel or reschedule?
+                            </button>
+                            <div class="accordion__body">
+                                Yes. Entrance tickets and day tours can be
+                                cancelled for free up to 24 hours before your
+                                visit, and rescheduled once for free.
+                            </div>
+                        </div>
+                        <div class="card accordion__item">
+                            <button class="accordion__head">
+                                Do children pay full price?
+                            </button>
+                            <div class="accordion__body">
+                                Children aged 3&ndash;11 pay 50%. Children under
+                                3 enter for free.
+                            </div>
+                        </div>
+                        <div class="card accordion__item">
+                            <button class="accordion__head">
+                                Which payment methods are accepted?
+                            </button>
+                            <div class="accordion__body">
+                                Bank transfer (virtual account), credit/debit
+                                card, e-wallets (GoPay, OVO, DANA, ShopeePay)
+                                and QRIS.
+                            </div>
+                        </div>
+                        <div class="card accordion__item">
+                            <button class="accordion__head">
+                                What is included in a holiday package?
+                            </button>
+                            <div class="accordion__body">
+                                Hotel, transport, a local guide, all entrance
+                                tickets and daily breakfast.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div id="site-footer"></div>
+
+        <script src="assets/js/layout.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

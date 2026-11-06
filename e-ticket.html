@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your e-ticket — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="bookings">
+  <div id="site-header"></div>
+
+  <section class="banner"
+    data-image="assets/img/borobudur-temple/01.jpg"
+    data-eyebrow="E-ticket"
+    data-title="Your e-ticket"
+    data-subtitle="Show the booking code at the entrance — no printing needed."></section>
+
+  <main class="page-main">
+    <div class="container">
+      <div class="card eticket">
+        <div class="eticket__head">
+          <small>Jelajah.id e-ticket</small>
+          <h2>Borobudur Temple</h2>
+          <div style="font-size:14px">Entrance ticket</div>
+          <span class="tag">Confirmed</span>
+        </div>
+        <div class="eticket__body">
+          <div class="eticket__grid">
+            <div><small>Visit date</small>Sat, 31 Oct 2026</div>
+            <div><small>Guests</small>2 adults</div>
+            <div><small>Lead guest</small>Test User</div>
+            <div><small>Location</small>Magelang, Central Java</div>
+            <div><small>Payment</small>Bank transfer</div>
+            <div><small>Total paid</small><span class="price" style="font-family:var(--font-body);font-weight:700">Rp 100.000</span></div>
+          </div>
+          <div class="eticket__code">
+            <small>Booking code &mdash; show at the entrance</small>
+            <strong>JLJ-GFUOT6</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn--primary btn--lg" type="button" onclick="window.print()">Print / save PDF</button>
+        <a class="btn btn--outline btn--lg" href="my-bookings.html">My Bookings</a>
+        <a class="btn-link" href="refund-policy.html">Cancel booking</a>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
