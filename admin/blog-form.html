@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New post · Admin — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="admin-body">
+  <div class="admin">
+    <aside class="admin-side">
+      <a class="logo" href="dashboard.html">JELAJAH.ID</a>
+      <p class="admin-side__label">Overview</p>
+      <nav class="admin-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+      <p class="admin-side__label">Catalog</p>
+      <nav class="admin-nav">
+        <a href="destinations.html">Destinations <span class="badge-count">14</span></a>
+        <a href="tickets.html">Tickets &amp; packages <span class="badge-count">25</span></a>
+        <a href="blog.html" class="is-active">Blog posts</a>
+      </nav>
+      <p class="admin-side__label">Transactions</p>
+      <nav class="admin-nav">
+        <a href="orders.html">Orders <span class="badge-count">2</span></a>
+      </nav>
+      <p class="admin-side__label">People</p>
+      <nav class="admin-nav">
+        <a href="users.html">Users</a>
+        <a href="messages.html">Messages <span class="badge-count">3</span></a>
+      </nav>
+      <p class="admin-side__label">System</p>
+      <nav class="admin-nav">
+        <a href="settings.html">Settings</a>
+        <a href="../index.html">View website</a>
+        <a href="index.html">Sign out</a>
+      </nav>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-top">
+        <input class="input" type="search" placeholder="Search orders, users, destinations...">
+        <a class="admin-user" href="settings.html">
+          <span class="avatar bg-coral">AJ</span>
+          <span>Admin Jelajah<small>Administrator</small></span>
+        </a>
+      </header>
+
+      <main class="admin-content">
+        <div class="admin-head">
+          <div>
+            <ul class="breadcrumb"><li><a href="blog.html">Blog posts</a></li><li>New post</li></ul>
+            <h1>New post</h1>
+            <p>Write a travel story or guide.</p>
+          </div>
+        </div>
+
+        <form class="layout-aside-right" action="blog.html">
+          <section class="card card-pad form-section">
+            <label class="label" for="b-title">Title</label>
+            <input class="input" id="b-title" placeholder="e.g. Diving Bunaken: Best Spots for Beginners" required>
+            <label class="label" for="b-excerpt" style="margin-top:14px">Excerpt</label>
+            <textarea class="textarea" id="b-excerpt" rows="2" placeholder="One or two sentences shown on the blog list"></textarea>
+            <label class="label" for="b-body" style="margin-top:14px">Content</label>
+            <textarea class="textarea" id="b-body" rows="14" placeholder="Write the article here..."></textarea>
+          </section>
+
+          <aside class="card card-pad">
+            <h2 style="font-size:20px">Publish</h2>
+            <label class="label" for="b-cat">Category</label>
+            <select class="select" id="b-cat"><option>Travel tips</option><option>Itinerary</option><option>Food</option><option>Budget travel</option><option>Adventure</option><option>Inspiration</option></select>
+            <label class="label" for="b-dest" style="margin-top:14px">Related destination</label>
+            <select class="select" id="b-dest"><option>None</option><option>Borobudur Temple</option><option>Ubud &amp; Tegallalang</option><option>Mount Bromo</option><option>Gili Islands</option><option>Nusa Penida &amp; Kelingking</option><option>Kawah Ijen</option><option>Labuan Bajo &amp; Komodo</option><option>Lake Toba</option><option>Dieng Plateau</option><option>Mount Rinjani</option><option>Raja Ampat</option><option>Citarik River Rafting</option><option>Bunaken Marine Park</option><option>Tana Toraja</option></select>
+            <label class="label" for="b-date" style="margin-top:14px">Publish date</label>
+            <input class="input" id="b-date" type="date">
+            <label class="label" style="margin-top:14px">Cover image</label>
+            <label class="upload" for="b-cover"><strong>Upload cover</strong>1200 &times; 675 px recommended<input id="b-cover" type="file" accept="image/*" class="is-hidden"></label>
+            <button class="btn btn--primary btn--block" type="submit" style="margin-top:20px">Publish</button>
+            <button class="btn btn--outline btn--block" type="submit" style="margin-top:10px">Save as draft</button>
+          </aside>
+        </form>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

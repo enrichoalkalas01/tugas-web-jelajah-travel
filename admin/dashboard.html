@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard · Admin — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="admin-body">
+  <div class="admin">
+    <aside class="admin-side">
+      <a class="logo" href="dashboard.html">JELAJAH.ID</a>
+      <p class="admin-side__label">Overview</p>
+      <nav class="admin-nav">
+        <a href="dashboard.html" class="is-active">Dashboard</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+      <p class="admin-side__label">Catalog</p>
+      <nav class="admin-nav">
+        <a href="destinations.html">Destinations <span class="badge-count">14</span></a>
+        <a href="tickets.html">Tickets &amp; packages <span class="badge-count">25</span></a>
+        <a href="blog.html">Blog posts</a>
+      </nav>
+      <p class="admin-side__label">Transactions</p>
+      <nav class="admin-nav">
+        <a href="orders.html">Orders <span class="badge-count">2</span></a>
+      </nav>
+      <p class="admin-side__label">People</p>
+      <nav class="admin-nav">
+        <a href="users.html">Users</a>
+        <a href="messages.html">Messages <span class="badge-count">3</span></a>
+      </nav>
+      <p class="admin-side__label">System</p>
+      <nav class="admin-nav">
+        <a href="settings.html">Settings</a>
+        <a href="../index.html">View website</a>
+        <a href="index.html">Sign out</a>
+      </nav>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-top">
+        <input class="input" type="search" placeholder="Search orders, users, destinations...">
+        <a class="admin-user" href="settings.html">
+          <span class="avatar bg-coral">AJ</span>
+          <span>Admin Jelajah<small>Administrator</small></span>
+        </a>
+      </header>
+
+      <main class="admin-content">
+        <div class="admin-head">
+          <div>
+            <h1>Dashboard</h1>
+            <p>Welcome back, Admin. Here is what is happening on Jelajah.id this month.</p>
+          </div>
+          <div class="btn-row" style="margin:0"><a class="btn btn--outline" href="reports.html">View reports</a><a class="btn btn--primary" href="destination-form.html">+ Add destination</a></div>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card kpi"><small>Revenue (Nov 2026)</small><strong>Rp 48,6 jt</strong><span>&#9650; 15,4% vs last month</span></div>
+          <div class="card kpi"><small>Bookings (Nov 2026)</small><strong>312</strong><span>&#9650; 9,8% vs last month</span></div>
+          <div class="card kpi"><small>Registered users</small><strong>1.284</strong><span>&#9650; 86 new this month</span></div>
+          <div class="card kpi"><small>Pending payments</small><strong>2</strong><span class="is-down">Rp 4,9 jt awaiting</span></div>
+        </div>
+
+        <div class="layout-aside-right" style="margin-top:24px">
+          <section class="card">
+            <div class="card-head"><h2>Monthly revenue (Rp juta)</h2><a class="link-arrow" href="reports.html">Details</a></div>
+            <div class="bars">
+            <div><b>21,4</b><i style="height:43%"></i>Jun</div>
+            <div><b>34,8</b><i style="height:70%"></i>Jul</div>
+            <div><b>39,2</b><i style="height:78%"></i>Aug</div>
+            <div><b>28,5</b><i style="height:57%"></i>Sep</div>
+            <div><b>42,1</b><i style="height:84%"></i>Oct</div>
+            <div><b>48,6</b><i style="height:97%"></i>Nov</div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="card-head"><h2>Top destinations</h2></div>
+            <ul class="rank">
+            <li><div><span>Raja Ampat</span><small>Rp 18,4 jt</small></div><div class="progress"><i style="width:100%"></i></div></li>
+            <li><div><span>Labuan Bajo &amp; Komodo</span><small>Rp 12,5 jt</small></div><div class="progress"><i style="width:68%"></i></div></li>
+            <li><div><span>Nusa Penida &amp; Kelingking</span><small>Rp 8,7 jt</small></div><div class="progress"><i style="width:47%"></i></div></li>
+            <li><div><span>Mount Rinjani</span><small>Rp 6,4 jt</small></div><div class="progress"><i style="width:35%"></i></div></li>
+            <li><div><span>Mount Bromo</span><small>Rp 3,6 jt</small></div><div class="progress"><i style="width:20%"></i></div></li>
+            </ul>
+          </section>
+        </div>
+
+        <section class="card" style="margin-top:24px">
+          <div class="card-head"><h2>Recent orders</h2><a class="link-arrow" href="orders.html">All orders</a></div>
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>Code</th><th>Customer</th><th>Item</th><th>Total</th><th>Status</th><th></th></tr></thead>
+              <tbody>
+              <tr data-status="confirmed">
+                <td><a href="order-detail.html"><strong>JLJ-GFUOT6</strong></a><br><small>03 Nov 2026</small></td>
+                <td>Rizky Pratama</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/borobudur-temple/01.jpg" alt=""><div><strong>Borobudur Temple</strong><small>Entrance ticket</small></div></div></td>
+                <td><span class="price">Rp 100.000</span></td>
+                <td><span class="tag tag--success">Confirmed</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              <tr data-status="pending">
+                <td><a href="order-detail.html"><strong>JLJ-K8Q2ZP</strong></a><br><small>07 Nov 2026</small></td>
+                <td>Rizky Pratama</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/mount-bromo/01.jpg" alt=""><div><strong>Mount Bromo</strong><small>Full-day guided tour</small></div></div></td>
+                <td><span class="price">Rp 720.000</span></td>
+                <td><span class="tag tag--warning">Pending payment</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              <tr data-status="confirmed">
+                <td><a href="order-detail.html"><strong>JLJ-M3R7TA</strong></a><br><small>06 Nov 2026</small></td>
+                <td>Siti Nurhaliza</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/raja-ampat/09.jpg" alt=""><div><strong>Raja Ampat</strong><small>4D3N holiday package</small></div></div></td>
+                <td><span class="price">Rp 15.300.000</span></td>
+                <td><span class="tag tag--success">Confirmed</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              <tr data-status="confirmed">
+                <td><a href="order-detail.html"><strong>JLJ-P5W1LD</strong></a><br><small>06 Nov 2026</small></td>
+                <td>Andi Saputra</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/nusa-penida-kelingking/02.jpg" alt=""><div><strong>Nusa Penida &amp; Kelingking</strong><small>3D2N holiday package</small></div></div></td>
+                <td><span class="price">Rp 8.700.000</span></td>
+                <td><span class="tag tag--success">Confirmed</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              <tr data-status="confirmed">
+                <td><a href="order-detail.html"><strong>JLJ-B9X4NE</strong></a><br><small>05 Nov 2026</small></td>
+                <td>Dewi Lestari</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/kawah-ijen/02.jpg" alt=""><div><strong>Kawah Ijen</strong><small>Entrance ticket</small></div></div></td>
+                <td><span class="price">Rp 340.000</span></td>
+                <td><span class="tag tag--success">Confirmed</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              <tr data-status="pending">
+                <td><a href="order-detail.html"><strong>JLJ-H2C6VU</strong></a><br><small>05 Nov 2026</small></td>
+                <td>Budi Santoso</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/labuan-bajo-komodo/01.jpg" alt=""><div><strong>Labuan Bajo &amp; Komodo</strong><small>3D2N holiday package</small></div></div></td>
+                <td><span class="price">Rp 8.330.000</span></td>
+                <td><span class="tag tag--warning">Pending payment</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:24px">
+          <div class="card-head"><h2>Unread messages</h2><a class="link-arrow" href="messages.html">Inbox</a></div>
+          <div class="table-wrap">
+            <table class="table">
+              <tbody>
+              <tr><td><div class="cell-main"><span class="avatar bg-coral">SN</span><div><strong>Siti Nurhaliza</strong><small>siti.nur@mail.com</small></div></div></td><td>Change visit date for Raja Ampat package</td><td><small>Today, 09:12</small></td></tr>
+              <tr><td><div class="cell-main"><span class="avatar bg-teal">BS</span><div><strong>Budi Santoso</strong><small>budi.santoso@mail.com</small></div></div></td><td>Virtual account number expired</td><td><small>Today, 07:48</small></td></tr>
+              <tr><td><div class="cell-main"><span class="avatar bg-blue">LM</span><div><strong>Lina Marlina</strong><small>lina.m@mail.com</small></div></div></td><td>Group booking for 25 people</td><td><small>Yesterday, 16:30</small></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

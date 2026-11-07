@@ -9,13 +9,15 @@
  *     ...
  *     <div id="site-footer"></div>
  *     <script src="assets/js/layout.js"></script>
+ *
+ * Pages inside a subfolder set <body data-root="../"> so shared links still resolve.
  */
 (function () {
   var NAV = [
     { key: "home", label: "Home", href: "index.html" },
     { key: "destinations", label: "Destinations", href: "destinations.html" },
     { key: "tickets", label: "Tickets", href: "tickets.html" },
-    { key: "bookings", label: "My Bookings", href: "my-bookings.html", badge: 1 },
+    { key: "bookings", label: "My Bookings", href: "dashboard/index.html", badge: 1 },
     { key: "about", label: "About Us", href: "about.html" }
   ];
 
@@ -32,7 +34,7 @@
     {
       title: "Travellers",
       links: [
-        ["My Bookings", "my-bookings.html"],
+        ["My Bookings", "dashboard/index.html"],
         ["FAQs", "faqs.html"],
         ["Refund Policy", "refund-policy.html"],
         ["Terms & Conditions", "terms-conditions.html"]
@@ -56,6 +58,7 @@
   ];
 
   var page = document.body.getAttribute("data-page") || "";
+  var root = document.body.getAttribute("data-root") || "";
 
   function renderHeader() {
     var el = document.getElementById("site-header");
@@ -64,17 +67,17 @@
     var items = NAV.map(function (n) {
       var badge = n.badge ? ' <span class="badge-count">' + n.badge + "</span>" : "";
       var active = n.key === page ? " is-active" : "";
-      return '<li><a class="nav__link' + active + '" href="' + n.href + '">' + n.label + badge + "</a></li>";
+      return '<li><a class="nav__link' + active + '" href="' + root + n.href + '">' + n.label + badge + "</a></li>";
     }).join("");
 
     el.outerHTML =
       '<header class="site-header">' +
         '<div class="container">' +
-          '<a class="logo" href="index.html">JELAJAH.ID</a>' +
+          '<a class="logo" href="' + root + 'index.html">JELAJAH.ID</a>' +
           '<button class="nav__toggle" aria-label="Open menu">&#9776;</button>' +
           '<nav class="nav">' +
             '<ul class="nav__menu">' + items + "</ul>" +
-            '<a class="btn btn--ghost-white" href="sign-in.html">Sign In</a>' +
+            '<a class="btn btn--ghost-white" href="' + root + 'sign-in.html">Sign In</a>' +
           "</nav>" +
         "</div>" +
       "</header>";
@@ -109,7 +112,7 @@
 
     var cols = FOOTER.map(function (col) {
       var links = col.links.map(function (l) {
-        return '<li><a href="' + l[1] + '">' + l[0] + "</a></li>";
+        return '<li><a href="' + root + l[1] + '">' + l[0] + "</a></li>";
       }).join("");
       return '<div><h4 class="footer__title">' + col.title + '</h4><ul class="footer__links">' + links + "</ul></div>";
     }).join("");
@@ -140,7 +143,7 @@
     var current = el.getAttribute("data-legal-nav");
     var links = LEGAL.map(function (l) {
       var active = l.key === current ? ' class="is-active"' : "";
-      return '<a href="' + l.href + '"' + active + ">" + l.label + "</a>";
+      return '<a href="' + root + l.href + '"' + active + ">" + l.label + "</a>";
     }).join("");
 
     el.classList.add("card", "side-nav");

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My bookings — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-page="bookings" data-root="../">
+  <div id="site-header"></div>
+
+  <section class="banner"
+    data-image="../assets/img/borobudur-temple/09.jpg"
+    data-eyebrow="My account"
+    data-title="Your trips &amp; e-tickets"
+    data-subtitle="Upcoming trips, payments and past bookings in one place."></section>
+
+  <main class="page-main">
+    <div class="container layout-sidebar">
+      <aside class="card side-nav">
+        <div class="account-user"><span class="avatar bg-coral">RP</span><div><strong>Rizky Pratama</strong><small>rizky.pratama@mail.com</small></div></div>
+        <a href="index.html" class="is-active">My bookings</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="profile.html">Profile &amp; security</a>
+        <a href="../sign-in.html">Sign out</a>
+      </aside>
+
+      <div>
+        <div class="link-tabs" data-status-tabs>
+          <button class="chip is-active" type="button" data-filter="all">All (4)</button>
+          <button class="chip" type="button" data-filter="upcoming">Upcoming (2)</button>
+          <button class="chip" type="button" data-filter="completed">Completed (1)</button>
+          <button class="chip" type="button" data-filter="cancelled">Cancelled (1)</button>
+        </div>
+
+        <article class="card list-card" data-status="confirmed upcoming">
+          <img class="list-card__img" src="../assets/img/borobudur-temple/01.jpg" alt="Borobudur Temple">
+          <div class="list-card__body">
+            <span class="tag tag--success">Confirmed</span>
+            <h3 class="list-card__title">Borobudur Temple</h3>
+            <div class="list-card__meta" style="font-size:14px">Entrance ticket &middot; Sat, 21 Nov 2026 &middot; 2 adults</div>
+            <p class="list-card__desc" style="font-size:13px">Booking code <strong style="color:var(--text)">JLJ-GFUOT6</strong> &middot; Paid with Bank transfer</p>
+          </div>
+          <div class="list-card__side" style="align-items:center">
+            <span class="price" style="align-self:flex-start">Rp 100.000</span>
+            <a class="btn btn--primary btn--block" href="../e-ticket.html">View e-ticket</a>
+          <a class="btn-link" href="../refund-policy.html">Cancel booking</a>
+          </div>
+        </article>
+
+        <article class="card list-card" data-status="pending upcoming">
+          <img class="list-card__img" src="../assets/img/mount-bromo/01.jpg" alt="Mount Bromo">
+          <div class="list-card__body">
+            <span class="tag tag--warning">Pending payment</span>
+            <h3 class="list-card__title">Mount Bromo</h3>
+            <div class="list-card__meta" style="font-size:14px">Full-day guided tour &middot; Sat, 28 Nov 2026 &middot; 2 adults</div>
+            <p class="list-card__desc" style="font-size:13px">Booking code <strong style="color:var(--text)">JLJ-K8Q2ZP</strong> &middot; Pay before Sun, 08 Nov 2026, 23:59 via Virtual account</p>
+          </div>
+          <div class="list-card__side" style="align-items:center">
+            <span class="price" style="align-self:flex-start">Rp 720.000</span>
+            <a class="btn btn--primary btn--block" href="../order.html?d=mount-bromo&amp;t=Full-day%20guided%20tour&amp;p=360000">Pay now</a>
+          <a class="btn-link" href="../refund-policy.html">Cancel booking</a>
+          </div>
+        </article>
+
+        <article class="card list-card" data-status="cancelled">
+          <img class="list-card__img" src="../assets/img/gili-islands/01.jpg" alt="Gili Islands">
+          <div class="list-card__body">
+            <span class="tag tag--danger">Cancelled</span>
+            <h3 class="list-card__title">Gili Islands</h3>
+            <div class="list-card__meta" style="font-size:14px">Free entry + harbour fee &middot; Sat, 10 Oct 2026 &middot; 2 adults</div>
+            <p class="list-card__desc" style="font-size:13px">Booking code <strong style="color:var(--text)">JLJ-D1L9GM</strong> &middot; Refunded on 12 Oct 2026 to your Bank transfer</p>
+          </div>
+          <div class="list-card__side" style="align-items:center">
+            <span class="price" style="align-self:flex-start">Rp 30.000</span>
+            <a class="btn btn--outline btn--block" href="../order.html?d=gili-islands&amp;t=Free%20entry%20%2B%20harbour%20fee&amp;p=15000">Book again</a>
+          </div>
+        </article>
+
+        <article class="card list-card" data-status="completed">
+          <img class="list-card__img" src="../assets/img/lake-toba/01.jpg" alt="Lake Toba">
+          <div class="list-card__body">
+            <span class="tag tag--info">Completed</span>
+            <h3 class="list-card__title">Lake Toba</h3>
+            <div class="list-card__meta" style="font-size:14px">3D2N holiday package &middot; Fri, 18 Sep 2026 &middot; 2 adults</div>
+            <p class="list-card__desc" style="font-size:13px">Booking code <strong style="color:var(--text)">JLJ-R4F8YK</strong> &middot; Paid with Credit card</p>
+          </div>
+          <div class="list-card__side" style="align-items:center">
+            <span class="price" style="align-self:flex-start">Rp 3.900.000</span>
+            <a class="btn btn--primary btn--block" href="../destination-detail.html?d=lake-toba">Write a review</a>
+          <a class="btn-link" href="../order.html?d=lake-toba&amp;t=3D2N%20holiday%20package&amp;p=1950000">Book again</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

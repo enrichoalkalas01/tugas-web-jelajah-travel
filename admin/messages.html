@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages · Admin — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="admin-body">
+  <div class="admin">
+    <aside class="admin-side">
+      <a class="logo" href="dashboard.html">JELAJAH.ID</a>
+      <p class="admin-side__label">Overview</p>
+      <nav class="admin-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+      <p class="admin-side__label">Catalog</p>
+      <nav class="admin-nav">
+        <a href="destinations.html">Destinations <span class="badge-count">14</span></a>
+        <a href="tickets.html">Tickets &amp; packages <span class="badge-count">25</span></a>
+        <a href="blog.html">Blog posts</a>
+      </nav>
+      <p class="admin-side__label">Transactions</p>
+      <nav class="admin-nav">
+        <a href="orders.html">Orders <span class="badge-count">2</span></a>
+      </nav>
+      <p class="admin-side__label">People</p>
+      <nav class="admin-nav">
+        <a href="users.html">Users</a>
+        <a href="messages.html" class="is-active">Messages <span class="badge-count">3</span></a>
+      </nav>
+      <p class="admin-side__label">System</p>
+      <nav class="admin-nav">
+        <a href="settings.html">Settings</a>
+        <a href="../index.html">View website</a>
+        <a href="index.html">Sign out</a>
+      </nav>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-top">
+        <input class="input" type="search" placeholder="Search orders, users, destinations...">
+        <a class="admin-user" href="settings.html">
+          <span class="avatar bg-coral">AJ</span>
+          <span>Admin Jelajah<small>Administrator</small></span>
+        </a>
+      </header>
+
+      <main class="admin-content">
+        <div class="admin-head">
+          <div>
+            <h1>Messages</h1>
+            <p>Questions sent from the Contact Us page. Click a message to read and reply.</p>
+          </div>
+        </div>
+
+        <section class="card">
+          <div class="card-head"><h2>Inbox</h2><span class="tag tag--soft">3 unread</span></div>
+          <details class="message" open>
+            <summary>
+              <span class="cell-main"><span class="avatar bg-coral">SN</span><span><strong>Siti Nurhaliza</strong><small>siti.nur@mail.com</small></span></span>
+              <span><span class="tag tag--warning" data-new>New</span> Change visit date for Raja Ampat package</span>
+              <small>Today, 09:12</small>
+            </summary>
+            <form class="message__body" action="messages.html">
+              <p>Hi, can I move my Raja Ampat trip (JLJ-M3R7TA) from 12 Dec to 19 Dec? Same number of guests.</p>
+              <textarea class="textarea" rows="3" placeholder="Write a reply to Siti Nurhaliza..."></textarea>
+              <div class="btn-row"><button class="btn btn--primary btn--sm" type="submit">Send reply</button><button class="btn btn--outline btn--sm" type="button" data-mark-read>Mark as read</button></div>
+            </form>
+          </details>
+          <details class="message">
+            <summary>
+              <span class="cell-main"><span class="avatar bg-teal">BS</span><span><strong>Budi Santoso</strong><small>budi.santoso@mail.com</small></span></span>
+              <span><span class="tag tag--warning" data-new>New</span> Virtual account number expired</span>
+              <small>Today, 07:48</small>
+            </summary>
+            <form class="message__body" action="messages.html">
+              <p>My virtual account for JLJ-H2C6VU expired before I could pay. Could you send a new one?</p>
+              <textarea class="textarea" rows="3" placeholder="Write a reply to Budi Santoso..."></textarea>
+              <div class="btn-row"><button class="btn btn--primary btn--sm" type="submit">Send reply</button><button class="btn btn--outline btn--sm" type="button" data-mark-read>Mark as read</button></div>
+            </form>
+          </details>
+          <details class="message">
+            <summary>
+              <span class="cell-main"><span class="avatar bg-blue">LM</span><span><strong>Lina Marlina</strong><small>lina.m@mail.com</small></span></span>
+              <span><span class="tag tag--warning" data-new>New</span> Group booking for 25 people</span>
+              <small>Yesterday, 16:30</small>
+            </summary>
+            <form class="message__body" action="messages.html">
+              <p>We are a school group of 25 people planning to visit Borobudur in January. Is there a group discount?</p>
+              <textarea class="textarea" rows="3" placeholder="Write a reply to Lina Marlina..."></textarea>
+              <div class="btn-row"><button class="btn btn--primary btn--sm" type="submit">Send reply</button><button class="btn btn--outline btn--sm" type="button" data-mark-read>Mark as read</button></div>
+            </form>
+          </details>
+          <details class="message">
+            <summary>
+              <span class="cell-main"><span class="avatar bg-purple">FH</span><span><strong>Fajar Hidayat</strong><small>fajar.h@mail.com</small></span></span>
+              <span>Thank you for the Dieng trip</span>
+              <small>05 Nov 2026</small>
+            </summary>
+            <form class="message__body" action="messages.html">
+              <p>Everything went smoothly, the e-ticket was scanned in seconds. Great service!</p>
+              <textarea class="textarea" rows="3" placeholder="Write a reply to Fajar Hidayat..."></textarea>
+              <div class="btn-row"><button class="btn btn--primary btn--sm" type="submit">Send reply</button><button class="btn btn--outline btn--sm" type="button" data-mark-read>Mark as read</button></div>
+            </form>
+          </details>
+          <details class="message">
+            <summary>
+              <span class="cell-main"><span class="avatar bg-coral">AW</span><span><strong>Agus Wijaya</strong><small>agus.wijaya@mail.com</small></span></span>
+              <span>Refund status</span>
+              <small>02 Nov 2026</small>
+            </summary>
+            <form class="message__body" action="messages.html">
+              <p>I cancelled JLJ-Y8E4RW. When will the refund reach my account?</p>
+              <textarea class="textarea" rows="3" placeholder="Write a reply to Agus Wijaya..."></textarea>
+              <div class="btn-row"><button class="btn btn--primary btn--sm" type="submit">Send reply</button><button class="btn btn--outline btn--sm" type="button" data-mark-read>Mark as read</button></div>
+            </form>
+          </details>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

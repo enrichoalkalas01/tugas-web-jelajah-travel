@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order JLJ-GFUOT6 · Admin — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="admin-body">
+  <div class="admin">
+    <aside class="admin-side">
+      <a class="logo" href="dashboard.html">JELAJAH.ID</a>
+      <p class="admin-side__label">Overview</p>
+      <nav class="admin-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+      <p class="admin-side__label">Catalog</p>
+      <nav class="admin-nav">
+        <a href="destinations.html">Destinations <span class="badge-count">14</span></a>
+        <a href="tickets.html">Tickets &amp; packages <span class="badge-count">25</span></a>
+        <a href="blog.html">Blog posts</a>
+      </nav>
+      <p class="admin-side__label">Transactions</p>
+      <nav class="admin-nav">
+        <a href="orders.html" class="is-active">Orders <span class="badge-count">2</span></a>
+      </nav>
+      <p class="admin-side__label">People</p>
+      <nav class="admin-nav">
+        <a href="users.html">Users</a>
+        <a href="messages.html">Messages <span class="badge-count">3</span></a>
+      </nav>
+      <p class="admin-side__label">System</p>
+      <nav class="admin-nav">
+        <a href="settings.html">Settings</a>
+        <a href="../index.html">View website</a>
+        <a href="index.html">Sign out</a>
+      </nav>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-top">
+        <input class="input" type="search" placeholder="Search orders, users, destinations...">
+        <a class="admin-user" href="settings.html">
+          <span class="avatar bg-coral">AJ</span>
+          <span>Admin Jelajah<small>Administrator</small></span>
+        </a>
+      </header>
+
+      <main class="admin-content">
+        <div class="admin-head">
+          <div>
+            <ul class="breadcrumb"><li><a href="orders.html">Orders</a></li><li>JLJ-GFUOT6</li></ul>
+            <h1>Order JLJ-GFUOT6</h1>
+            <p>Created 03 Nov 2026, 14:22 WIB</p>
+          </div>
+          <div class="btn-row" style="margin:0"><a class="btn btn--outline" href="../e-ticket.html">View e-ticket</a></div>
+        </div>
+
+        <div class="layout-aside-right">
+          <div>
+            <section class="card">
+              <div class="card-head"><h2>Booking</h2><span class="tag tag--success">Confirmed</span></div>
+              <div class="card-pad">
+                <dl class="detail-list">
+                  <dt>Booking code</dt><dd><strong>JLJ-GFUOT6</strong></dd>
+                  <dt>Destination</dt><dd><a href="../destination-detail.html?d=borobudur-temple">Borobudur Temple</a> &middot; Magelang, Central Java</dd>
+                  <dt>Ticket</dt><dd>Entrance ticket</dd>
+                  <dt>Visit date</dt><dd>Sat, 21 Nov 2026</dd>
+                  <dt>Guests</dt><dd>2 adults</dd>
+                </dl>
+              </div>
+            </section>
+
+            <section class="card" style="margin-top:20px">
+              <div class="card-head"><h2>Customer</h2><a class="link-arrow" href="user-form.html">Profile</a></div>
+              <div class="card-pad">
+                <dl class="detail-list">
+                  <dt>Name</dt><dd>Rizky Pratama</dd>
+                  <dt>Email</dt><dd>rizky.pratama@mail.com</dd>
+                  <dt>Phone</dt><dd>+62 812 3456 7890</dd>
+                  <dt>Special request</dt><dd>Wheelchair access for one guest, please.</dd>
+                </dl>
+              </div>
+            </section>
+
+            <section class="card" style="margin-top:20px">
+              <div class="card-head"><h2>Payment</h2><span class="tag tag--success">Paid</span></div>
+              <div class="table-wrap">
+                <table class="table">
+                  <thead><tr><th>Item</th><th>Qty</th><th>Price</th><th>Subtotal</th></tr></thead>
+                  <tbody>
+                    <tr><td>Borobudur Temple — Entrance ticket</td><td>2</td><td>Rp 50.000</td><td>Rp 100.000</td></tr>
+                    <tr><td>Service fee</td><td>1</td><td>Rp 0</td><td>Rp 0</td></tr>
+                    <tr><td colspan="3"><strong>Total paid via Bank transfer</strong></td><td><span class="price">Rp 100.000</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+
+          <aside>
+            <form class="card card-pad" action="orders.html">
+              <h2 style="font-size:20px">Update status</h2>
+              <label class="label" for="o-status">Status</label>
+              <select class="select" id="o-status"><option selected>Confirmed</option><option>Pending payment</option><option>Completed</option><option>Cancelled</option></select>
+              <label class="label" for="o-note" style="margin-top:14px">Note to customer</label>
+              <textarea class="textarea" id="o-note" rows="3" placeholder="Optional, sent by email"></textarea>
+              <button class="btn btn--primary btn--block" type="submit" style="margin-top:16px">Save status</button>
+              <button class="btn btn--danger btn--block" type="button" style="margin-top:10px">Cancel &amp; refund</button>
+            </form>
+
+            <section class="card" style="margin-top:20px">
+              <div class="card-head"><h2>History</h2></div>
+              <ul class="timeline">
+                <li>E-ticket sent to customer<small>03 Nov 2026, 14:31</small></li>
+                <li>Payment received (Bank transfer)<small>03 Nov 2026, 14:30</small></li>
+                <li>Order created<small>03 Nov 2026, 14:22</small></li>
+              </ul>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

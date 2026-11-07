@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations · Admin — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="admin-body">
+  <div class="admin">
+    <aside class="admin-side">
+      <a class="logo" href="dashboard.html">JELAJAH.ID</a>
+      <p class="admin-side__label">Overview</p>
+      <nav class="admin-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+      <p class="admin-side__label">Catalog</p>
+      <nav class="admin-nav">
+        <a href="destinations.html" class="is-active">Destinations <span class="badge-count">14</span></a>
+        <a href="tickets.html">Tickets &amp; packages <span class="badge-count">25</span></a>
+        <a href="blog.html">Blog posts</a>
+      </nav>
+      <p class="admin-side__label">Transactions</p>
+      <nav class="admin-nav">
+        <a href="orders.html">Orders <span class="badge-count">2</span></a>
+      </nav>
+      <p class="admin-side__label">People</p>
+      <nav class="admin-nav">
+        <a href="users.html">Users</a>
+        <a href="messages.html">Messages <span class="badge-count">3</span></a>
+      </nav>
+      <p class="admin-side__label">System</p>
+      <nav class="admin-nav">
+        <a href="settings.html">Settings</a>
+        <a href="../index.html">View website</a>
+        <a href="index.html">Sign out</a>
+      </nav>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-top">
+        <input class="input" type="search" placeholder="Search orders, users, destinations...">
+        <a class="admin-user" href="settings.html">
+          <span class="avatar bg-coral">AJ</span>
+          <span>Admin Jelajah<small>Administrator</small></span>
+        </a>
+      </header>
+
+      <main class="admin-content">
+        <div class="admin-head">
+          <div>
+            <h1>Destinations</h1>
+            <p>14 destinations shown on the website.</p>
+          </div>
+          <div class="btn-row" style="margin:0"><a class="btn btn--primary" href="destination-form.html">+ Add destination</a></div>
+        </div>
+
+        <form class="card admin-filters" data-table-filter>
+          <input class="input" type="search" placeholder="Search destination...">
+          <select class="select"><option>All regions</option><option>Java</option><option>Bali</option><option>Nusa Tenggara</option><option>Sumatra</option><option>Sulawesi</option><option>Papua</option></select>
+          <select class="select"><option>All types</option><option>Beach</option><option>Mountain</option><option>Culture</option><option>Nature</option></select>
+          <select class="select"><option>All status</option><option>Published</option><option>Draft</option></select>
+          <button class="btn btn--primary" type="submit">Filter</button>
+        </form>
+
+        <section class="card">
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>Destination</th><th>Region</th><th>Category</th><th>Price from</th><th>Rating</th><th>Status</th><th>Actions</th></tr></thead>
+              <tbody>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/borobudur-temple/01.jpg" alt=""><div><strong>Borobudur Temple</strong><small>Magelang, Central Java</small></div></div></td>
+                <td>Java</td>
+                <td>Culture &amp; heritage</td>
+                <td><span class="price">Rp 50.000</span></td>
+                <td>&#9733; 4.88<br><small>5,120 reviews</small></td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../destination-detail.html?d=borobudur-temple">View</a><a class="btn btn--outline btn--xs" href="destination-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/ubud-tegallalang/14.jpg" alt=""><div><strong>Ubud &amp; Tegallalang</strong><small>Ubud and Tegallalang, Gianyar, Bali</small></div></div></td>
+                <td>Bali</td>
+                <td>Culture &amp; nature</td>
+                <td><span class="price">Rp 15.000</span></td>
+                <td>&#9733; 4.87<br><small>4,290 reviews</small></td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../destination-detail.html?d=ubud-tegallalang">View</a><a class="btn btn--outline btn--xs" href="destination-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/mount-bromo/01.jpg" alt=""><div><strong>Mount Bromo</strong><small>Bromo Tengger Semeru National Park, East Java</small></div></div></td>
+                <td>Java</td>
+                <td>Mountain &amp; volcano</td>
+                <td><span class="price">Rp 28.000</span></td>
+                <td>&#9733; 4.92<br><small>3,310 reviews</small></td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../destination-detail.html?d=mount-bromo">View</a><a class="btn btn--outline btn--xs" href="destination-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/gili-islands/01.jpg" alt=""><div><strong>Gili Islands</strong><small>Northwest coast of Lombok, West Nusa Tenggara</small></div></div></td>
+                <td>Nusa Tenggara</td>
+                <td>Beach &amp; island</td>
+                <td><span class="price">Rp 15.000</span></td>
+                <td>&#9733; 4.89<br><small>2,650 reviews</small></td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../destination-detail.html?d=gili-islands">View</a><a class="btn btn--outline btn--xs" href="destination-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/nusa-penida-kelingking/02.jpg" alt=""><div><strong>Nusa Penida &amp; Kelingking</strong><small>Nusa Penida, Klungkung, Bali</small></div></div></td>
+                <td>Bali</td>
+                <td>Beach &amp; island</td>
+                <td><span class="price">Rp 25.000</span></td>
+                <td>&#9733; 4.96<br><small>2,140 reviews</small></td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../destination-detail.html?d=nusa-penida-kelingking">View</a><a class="btn btn--outline btn--xs" href="destination-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/kawah-ijen/02.jpg" alt=""><div><strong>Kawah Ijen</strong><small>Ijen volcanic complex, Banyuwangi and Bondowoso, East Java</small></div></div></td>
+                <td>Java</td>
+                <td>Mountain &amp; volcano</td>
+                <td><span class="price">Rp 85.000</span></td>
+                <td>&#9733; 4.93<br><small>1,890 reviews</small></td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../destination-detail.html?d=kawah-ijen">View</a><a class="btn btn--outline btn--xs" href="destination-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/labuan-bajo-komodo/01.jpg" alt=""><div><strong>Labuan Bajo &amp; Komodo</strong><small>Labuan Bajo, West Manggarai, East Nusa Tenggara</small></div></div></td>
+                <td>Nusa Tenggara</td>
+                <td>Beach &amp; island</td>
+                <td><span class="price">Rp 127.500</span></td>
+                <td>&#9733; 4.95<br><small>1,720 reviews</small></td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../destination-detail.html?d=labuan-bajo-komodo">View</a><a class="btn btn--outline btn--xs" href="destination-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/lake-toba/01.jpg" alt=""><div><strong>Lake Toba</strong><small>Lake Toba and Samosir Island, North Sumatra</small></div></div></td>
+                <td>Sumatra</td>
+                <td>Nature &amp; culture</td>
+                <td><span class="price">Rp 20.000</span></td>
+                <td>&#9733; 4.84<br><small>1,180 reviews</small></td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../destination-detail.html?d=lake-toba">View</a><a class="btn btn--outline btn--xs" href="destination-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/dieng-plateau/01.jpg" alt=""><div><strong>Dieng Plateau</strong><small>Dieng, Wonosobo and Banjarnegara, Central Java</small></div></div></td>
+                <td>Java</td>
+                <td>Mountain &amp; nature</td>
+                <td><span class="price">Rp 25.000</span></td>
+                <td>&#9733; 4.80<br><small>980 reviews</small></td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../destination-detail.html?d=dieng-plateau">View</a><a class="btn btn--outline btn--xs" href="destination-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/mount-rinjani/01.jpg" alt=""><div><strong>Mount Rinjani</strong><small>Lombok, West Nusa Tenggara</small></div></div></td>
+                <td>Nusa Tenggara</td>
+                <td>Mountain &amp; volcano</td>
+                <td><span class="price">Rp 150.000</span></td>
+                <td>&#9733; 4.90<br><small>940 reviews</small></td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../destination-detail.html?d=mount-rinjani">View</a><a class="btn btn--outline btn--xs" href="destination-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/raja-ampat/09.jpg" alt=""><div><strong>Raja Ampat</strong><small>Raja Ampat, Southwest Papua</small></div></div></td>
+                <td>Papua</td>
+                <td>Beach &amp; marine nature</td>
+                <td><span class="price">Rp 450.000</span></td>
+                <td>&#9733; 4.98<br><small>860 reviews</small></td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../destination-detail.html?d=raja-ampat">View</a><a class="btn btn--outline btn--xs" href="destination-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/citarik-river-rafting/01.jpg" alt=""><div><strong>Citarik River Rafting</strong><small>Citarik River, Sukabumi, West Java</small></div></div></td>
+                <td>Java</td>
+                <td>Nature &amp; adventure</td>
+                <td><span class="price">Rp 225.000</span></td>
+                <td>&#9733; 4.82<br><small>760 reviews</small></td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../destination-detail.html?d=citarik-river-rafting">View</a><a class="btn btn--outline btn--xs" href="destination-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/bunaken-marine-park/01.jpg" alt=""><div><strong>Bunaken Marine Park</strong><small>Bunaken and Manado Bay, North Sulawesi</small></div></div></td>
+                <td>Sulawesi</td>
+                <td>Beach &amp; marine nature</td>
+                <td><span class="price">Rp 150.000</span></td>
+                <td>&#9733; 4.91<br><small>610 reviews</small></td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../destination-detail.html?d=bunaken-marine-park">View</a><a class="btn btn--outline btn--xs" href="destination-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/tana-toraja/04.jpg" alt=""><div><strong>Tana Toraja</strong><small>Tana Toraja highlands, South Sulawesi</small></div></div></td>
+                <td>Sulawesi</td>
+                <td>Culture &amp; nature</td>
+                <td><span class="price">Rp 30.000</span></td>
+                <td>&#9733; 4.86<br><small>520 reviews</small></td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../destination-detail.html?d=tana-toraja">View</a><a class="btn btn--outline btn--xs" href="destination-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination">
+            <span>Showing 14 of 14</span>
+            <nav><a href="#">&lsaquo;</a><a class="is-active" href="#">1</a><a href="#">&rsaquo;</a></nav>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

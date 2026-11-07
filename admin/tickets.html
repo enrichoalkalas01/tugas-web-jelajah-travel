@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tickets & packages · Admin — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="admin-body">
+  <div class="admin">
+    <aside class="admin-side">
+      <a class="logo" href="dashboard.html">JELAJAH.ID</a>
+      <p class="admin-side__label">Overview</p>
+      <nav class="admin-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+      <p class="admin-side__label">Catalog</p>
+      <nav class="admin-nav">
+        <a href="destinations.html">Destinations <span class="badge-count">14</span></a>
+        <a href="tickets.html" class="is-active">Tickets &amp; packages <span class="badge-count">25</span></a>
+        <a href="blog.html">Blog posts</a>
+      </nav>
+      <p class="admin-side__label">Transactions</p>
+      <nav class="admin-nav">
+        <a href="orders.html">Orders <span class="badge-count">2</span></a>
+      </nav>
+      <p class="admin-side__label">People</p>
+      <nav class="admin-nav">
+        <a href="users.html">Users</a>
+        <a href="messages.html">Messages <span class="badge-count">3</span></a>
+      </nav>
+      <p class="admin-side__label">System</p>
+      <nav class="admin-nav">
+        <a href="settings.html">Settings</a>
+        <a href="../index.html">View website</a>
+        <a href="index.html">Sign out</a>
+      </nav>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-top">
+        <input class="input" type="search" placeholder="Search orders, users, destinations...">
+        <a class="admin-user" href="settings.html">
+          <span class="avatar bg-coral">AJ</span>
+          <span>Admin Jelajah<small>Administrator</small></span>
+        </a>
+      </header>
+
+      <main class="admin-content">
+        <div class="admin-head">
+          <div>
+            <h1>Tickets &amp; packages</h1>
+            <p>25 products: entrance tickets, day tours and holiday packages.</p>
+          </div>
+          <div class="btn-row" style="margin:0"><a class="btn btn--primary" href="ticket-form.html">+ Add ticket</a></div>
+        </div>
+
+        <form class="card admin-filters" data-table-filter>
+          <input class="input" type="search" placeholder="Search ticket...">
+          <select class="select"><option>All types</option><option>Entrance ticket</option><option>Day tour</option><option>Holiday package</option></select>
+          <select class="select"><option>All destinations</option><option>Borobudur Temple</option><option>Ubud &amp; Tegallalang</option><option>Mount Bromo</option><option>Gili Islands</option><option>Nusa Penida &amp; Kelingking</option><option>Kawah Ijen</option><option>Labuan Bajo &amp; Komodo</option><option>Lake Toba</option><option>Dieng Plateau</option><option>Mount Rinjani</option><option>Raja Ampat</option><option>Citarik River Rafting</option><option>Bunaken Marine Park</option><option>Tana Toraja</option></select>
+          <button class="btn btn--primary" type="submit">Filter</button>
+        </form>
+
+        <section class="card">
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>Ticket</th><th>Type</th><th>Price</th><th>Daily quota</th><th>Sold (Nov)</th><th>Status</th><th>Actions</th></tr></thead>
+              <tbody>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/ubud-tegallalang/14.jpg" alt=""><div><strong>Ubud &amp; Tegallalang — Entrance ticket</strong><small>Gianyar, Bali</small></div></div></td>
+                <td><span class="tag tag--entrance">Entrance ticket</span></td>
+                <td><span class="price">Rp 15.000</span><br><small>/ person</small></td>
+                <td>500</td>
+                <td>13</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/gili-islands/01.jpg" alt=""><div><strong>Gili Islands — Free entry + harbour fee</strong><small>North Lombok, West Nusa Tenggara</small></div></div></td>
+                <td><span class="tag tag--entrance">Entrance ticket</span></td>
+                <td><span class="price">Rp 15.000</span><br><small>/ person</small></td>
+                <td>500</td>
+                <td>50</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/lake-toba/01.jpg" alt=""><div><strong>Lake Toba — Entrance ticket</strong><small>Samosir, North Sumatra</small></div></div></td>
+                <td><span class="tag tag--entrance">Entrance ticket</span></td>
+                <td><span class="price">Rp 20.000</span><br><small>/ person</small></td>
+                <td>500</td>
+                <td>87</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/nusa-penida-kelingking/02.jpg" alt=""><div><strong>Nusa Penida — Entrance ticket</strong><small>Klungkung, Bali</small></div></div></td>
+                <td><span class="tag tag--entrance">Entrance ticket</span></td>
+                <td><span class="price">Rp 25.000</span><br><small>/ person</small></td>
+                <td>500</td>
+                <td>124</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/dieng-plateau/01.jpg" alt=""><div><strong>Dieng Plateau — Entrance ticket</strong><small>Wonosobo, Central Java</small></div></div></td>
+                <td><span class="tag tag--entrance">Entrance ticket</span></td>
+                <td><span class="price">Rp 25.000</span><br><small>/ person</small></td>
+                <td>500</td>
+                <td>161</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/mount-bromo/01.jpg" alt=""><div><strong>Mount Bromo — Entrance ticket</strong><small>Bromo Tengger Semeru, East Java</small></div></div></td>
+                <td><span class="tag tag--entrance">Entrance ticket</span></td>
+                <td><span class="price">Rp 28.000</span><br><small>/ person</small></td>
+                <td>500</td>
+                <td>18</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/tana-toraja/04.jpg" alt=""><div><strong>Tana Toraja — Entrance ticket</strong><small>Tana Toraja, South Sulawesi</small></div></div></td>
+                <td><span class="tag tag--entrance">Entrance ticket</span></td>
+                <td><span class="price">Rp 30.000</span><br><small>/ person</small></td>
+                <td>500</td>
+                <td>55</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/borobudur-temple/01.jpg" alt=""><div><strong>Borobudur Temple — Entrance ticket</strong><small>Magelang, Central Java</small></div></div></td>
+                <td><span class="tag tag--entrance">Entrance ticket</span></td>
+                <td><span class="price">Rp 50.000</span><br><small>/ person</small></td>
+                <td>500</td>
+                <td>92</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/kawah-ijen/02.jpg" alt=""><div><strong>Kawah Ijen — Entrance ticket</strong><small>Banyuwangi, East Java</small></div></div></td>
+                <td><span class="tag tag--entrance">Entrance ticket</span></td>
+                <td><span class="price">Rp 85.000</span><br><small>/ person</small></td>
+                <td>500</td>
+                <td>129</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/labuan-bajo-komodo/01.jpg" alt=""><div><strong>Labuan Bajo &amp; Komodo — Entrance ticket</strong><small>West Manggarai, East Nusa Tenggara</small></div></div></td>
+                <td><span class="tag tag--entrance">Entrance ticket</span></td>
+                <td><span class="price">Rp 127.500</span><br><small>/ person</small></td>
+                <td>500</td>
+                <td>166</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/mount-rinjani/01.jpg" alt=""><div><strong>Mount Rinjani — Entrance ticket</strong><small>Lombok, West Nusa Tenggara</small></div></div></td>
+                <td><span class="tag tag--entrance">Entrance ticket</span></td>
+                <td><span class="price">Rp 150.000</span><br><small>/ person</small></td>
+                <td>500</td>
+                <td>23</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/bunaken-marine-park/01.jpg" alt=""><div><strong>Bunaken Marine Park — Entrance ticket</strong><small>Manado, North Sulawesi</small></div></div></td>
+                <td><span class="tag tag--entrance">Entrance ticket</span></td>
+                <td><span class="price">Rp 150.000</span><br><small>/ person</small></td>
+                <td>500</td>
+                <td>60</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/citarik-river-rafting/02.jpg" alt=""><div><strong>Citarik River Rafting — Entrance ticket</strong><small>Sukabumi, West Java</small></div></div></td>
+                <td><span class="tag tag--entrance">Entrance ticket</span></td>
+                <td><span class="price">Rp 225.000</span><br><small>/ person</small></td>
+                <td>500</td>
+                <td>97</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/dieng-plateau/14.jpg" alt=""><div><strong>Dieng Plateau — Full-day guided tour</strong><small>Wonosobo, Central Java</small></div></div></td>
+                <td><span class="tag tag--day">Day tour</span></td>
+                <td><span class="price">Rp 300.000</span><br><small>/ person</small></td>
+                <td>20</td>
+                <td>8</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/borobudur-temple/09.jpg" alt=""><div><strong>Borobudur Temple — Full-day guided tour</strong><small>Magelang, Central Java</small></div></div></td>
+                <td><span class="tag tag--day">Day tour</span></td>
+                <td><span class="price">Rp 350.000</span><br><small>/ person</small></td>
+                <td>20</td>
+                <td>9</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/mount-bromo/14.jpg" alt=""><div><strong>Mount Bromo — Full-day guided tour</strong><small>Bromo Tengger Semeru, East Java</small></div></div></td>
+                <td><span class="tag tag--day">Day tour</span></td>
+                <td><span class="price">Rp 360.000</span><br><small>/ person</small></td>
+                <td>20</td>
+                <td>10</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/raja-ampat/01.jpg" alt=""><div><strong>Raja Ampat — Full-day guided tour</strong><small>Southwest Papua</small></div></div></td>
+                <td><span class="tag tag--day">Day tour</span></td>
+                <td><span class="price">Rp 1.350.000</span><br><small>/ person</small></td>
+                <td>20</td>
+                <td>2</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/ubud-tegallalang/09.jpg" alt=""><div><strong>Ubud &amp; Tegallalang — 2D1N holiday package</strong><small>Gianyar, Bali</small></div></div></td>
+                <td><span class="tag tag--holiday">Holiday package</span></td>
+                <td><span class="price">Rp 1.800.000</span><br><small>/ person</small></td>
+                <td>12</td>
+                <td>3</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/lake-toba/12.jpg" alt=""><div><strong>Lake Toba — 3D2N holiday package</strong><small>Samosir, North Sumatra</small></div></div></td>
+                <td><span class="tag tag--holiday">Holiday package</span></td>
+                <td><span class="price">Rp 1.950.000</span><br><small>/ person</small></td>
+                <td>12</td>
+                <td>4</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/tana-toraja/11.jpg" alt=""><div><strong>Tana Toraja — 3D2N holiday package</strong><small>Tana Toraja, South Sulawesi</small></div></div></td>
+                <td><span class="tag tag--holiday">Holiday package</span></td>
+                <td><span class="price">Rp 2.600.000</span><br><small>/ person</small></td>
+                <td>12</td>
+                <td>5</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/nusa-penida-kelingking/08.jpg" alt=""><div><strong>Nusa Penida — 3D2N holiday package</strong><small>Klungkung, Bali</small></div></div></td>
+                <td><span class="tag tag--holiday">Holiday package</span></td>
+                <td><span class="price">Rp 2.900.000</span><br><small>/ person</small></td>
+                <td>12</td>
+                <td>6</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/bunaken-marine-park/07.jpg" alt=""><div><strong>Bunaken Marine Park — 3D2N holiday package</strong><small>Manado, North Sulawesi</small></div></div></td>
+                <td><span class="tag tag--holiday">Holiday package</span></td>
+                <td><span class="price">Rp 3.100.000</span><br><small>/ person</small></td>
+                <td>12</td>
+                <td>7</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/mount-rinjani/03.jpg" alt=""><div><strong>Mount Rinjani — 3D2N holiday package</strong><small>Lombok, West Nusa Tenggara</small></div></div></td>
+                <td><span class="tag tag--holiday">Holiday package</span></td>
+                <td><span class="price">Rp 3.200.000</span><br><small>/ person</small></td>
+                <td>12</td>
+                <td>8</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/labuan-bajo-komodo/12.jpg" alt=""><div><strong>Labuan Bajo &amp; Komodo — 3D2N holiday package</strong><small>West Manggarai, East Nusa Tenggara</small></div></div></td>
+                <td><span class="tag tag--holiday">Holiday package</span></td>
+                <td><span class="price">Rp 4.165.000</span><br><small>/ person</small></td>
+                <td>12</td>
+                <td>9</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/raja-ampat/01.jpg" alt=""><div><strong>Raja Ampat — 4D3N holiday package</strong><small>Southwest Papua</small></div></div></td>
+                <td><span class="tag tag--holiday">Holiday package</span></td>
+                <td><span class="price">Rp 7.650.000</span><br><small>/ person</small></td>
+                <td>12</td>
+                <td>10</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="ticket-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination">
+            <span>Showing 25 of 25</span>
+            <nav><a href="#">&lsaquo;</a><a class="is-active" href="#">1</a><a href="#">&rsaquo;</a></nav>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog posts · Admin — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="admin-body">
+  <div class="admin">
+    <aside class="admin-side">
+      <a class="logo" href="dashboard.html">JELAJAH.ID</a>
+      <p class="admin-side__label">Overview</p>
+      <nav class="admin-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+      <p class="admin-side__label">Catalog</p>
+      <nav class="admin-nav">
+        <a href="destinations.html">Destinations <span class="badge-count">14</span></a>
+        <a href="tickets.html">Tickets &amp; packages <span class="badge-count">25</span></a>
+        <a href="blog.html" class="is-active">Blog posts</a>
+      </nav>
+      <p class="admin-side__label">Transactions</p>
+      <nav class="admin-nav">
+        <a href="orders.html">Orders <span class="badge-count">2</span></a>
+      </nav>
+      <p class="admin-side__label">People</p>
+      <nav class="admin-nav">
+        <a href="users.html">Users</a>
+        <a href="messages.html">Messages <span class="badge-count">3</span></a>
+      </nav>
+      <p class="admin-side__label">System</p>
+      <nav class="admin-nav">
+        <a href="settings.html">Settings</a>
+        <a href="../index.html">View website</a>
+        <a href="index.html">Sign out</a>
+      </nav>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-top">
+        <input class="input" type="search" placeholder="Search orders, users, destinations...">
+        <a class="admin-user" href="settings.html">
+          <span class="avatar bg-coral">AJ</span>
+          <span>Admin Jelajah<small>Administrator</small></span>
+        </a>
+      </header>
+
+      <main class="admin-content">
+        <div class="admin-head">
+          <div>
+            <h1>Blog posts</h1>
+            <p>Travel stories and guides published on the blog.</p>
+          </div>
+          <div class="btn-row" style="margin:0"><a class="btn btn--primary" href="blog-form.html">+ New post</a></div>
+        </div>
+
+        <section class="card">
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>Post</th><th>Category</th><th>Author</th><th>Published</th><th>Views</th><th>Status</th><th>Actions</th></tr></thead>
+              <tbody>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/mount-bromo/01.jpg" alt=""><strong>10 Tips for Watching the Bromo Sunrise</strong></div></td>
+                <td>Travel tips</td>
+                <td>Nadia Rahma</td>
+                <td>28 Oct 2026</td>
+                <td>3,420</td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../blog-article.html">View</a><a class="btn btn--outline btn--xs" href="blog-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/labuan-bajo-komodo/01.jpg" alt=""><strong>Island Hopping in Labuan Bajo: A 3-Day Itinerary</strong></div></td>
+                <td>Itinerary</td>
+                <td>Nadia Rahma</td>
+                <td>20 Oct 2026</td>
+                <td>2,875</td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../blog-article.html">View</a><a class="btn btn--outline btn--xs" href="blog-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/borobudur-temple/01.jpg" alt=""><strong>What to Eat in Yogyakarta After Visiting Borobudur</strong></div></td>
+                <td>Food</td>
+                <td>Admin Jelajah</td>
+                <td>12 Oct 2026</td>
+                <td>1,960</td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../blog-article.html">View</a><a class="btn btn--outline btn--xs" href="blog-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/raja-ampat/09.jpg" alt=""><strong>Raja Ampat on a Budget: Is It Possible?</strong></div></td>
+                <td>Budget travel</td>
+                <td>Nadia Rahma</td>
+                <td>03 Oct 2026</td>
+                <td>4,110</td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../blog-article.html">View</a><a class="btn btn--outline btn--xs" href="blog-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/mount-rinjani/01.jpg" alt=""><strong>A First-Timer's Guide to Climbing Mount Rinjani</strong></div></td>
+                <td>Adventure</td>
+                <td>Admin Jelajah</td>
+                <td>24 Sep 2026</td>
+                <td>2,230</td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../blog-article.html">View</a><a class="btn btn--outline btn--xs" href="blog-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/lake-toba/01.jpg" alt=""><strong>Why Lake Toba Should Be Your Next Weekend Trip</strong></div></td>
+                <td>Inspiration</td>
+                <td>Nadia Rahma</td>
+                <td>15 Sep 2026</td>
+                <td>1,505</td>
+                <td><span class="tag tag--success">Published</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../blog-article.html">View</a><a class="btn btn--outline btn--xs" href="blog-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/bunaken-marine-park/01.jpg" alt=""><strong>Diving Bunaken: Best Spots for Beginners</strong></div></td>
+                <td>Adventure</td>
+                <td>Nadia Rahma</td>
+                <td>—</td>
+                <td>0</td>
+                <td><span class="tag tag--muted">Draft</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="../blog-article.html">View</a><a class="btn btn--outline btn--xs" href="blog-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button" data-remove>Delete</button></div></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination">
+            <span>Showing 7 of 7</span>
+            <nav><a href="#">&lsaquo;</a><a class="is-active" href="#">1</a><a href="#">&rsaquo;</a></nav>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

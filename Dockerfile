@@ -6,5 +6,7 @@ FROM nginxinc/nginx-unprivileged:1.27.4-alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --chown=101:101 *.html /usr/share/nginx/html/
 COPY --chown=101:101 assets /usr/share/nginx/html/assets
+COPY --chown=101:101 admin /usr/share/nginx/html/admin
+COPY --chown=101:101 dashboard /usr/share/nginx/html/dashboard
 
 EXPOSE 8080

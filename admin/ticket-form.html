@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add ticket · Admin — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="admin-body">
+  <div class="admin">
+    <aside class="admin-side">
+      <a class="logo" href="dashboard.html">JELAJAH.ID</a>
+      <p class="admin-side__label">Overview</p>
+      <nav class="admin-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+      <p class="admin-side__label">Catalog</p>
+      <nav class="admin-nav">
+        <a href="destinations.html">Destinations <span class="badge-count">14</span></a>
+        <a href="tickets.html" class="is-active">Tickets &amp; packages <span class="badge-count">25</span></a>
+        <a href="blog.html">Blog posts</a>
+      </nav>
+      <p class="admin-side__label">Transactions</p>
+      <nav class="admin-nav">
+        <a href="orders.html">Orders <span class="badge-count">2</span></a>
+      </nav>
+      <p class="admin-side__label">People</p>
+      <nav class="admin-nav">
+        <a href="users.html">Users</a>
+        <a href="messages.html">Messages <span class="badge-count">3</span></a>
+      </nav>
+      <p class="admin-side__label">System</p>
+      <nav class="admin-nav">
+        <a href="settings.html">Settings</a>
+        <a href="../index.html">View website</a>
+        <a href="index.html">Sign out</a>
+      </nav>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-top">
+        <input class="input" type="search" placeholder="Search orders, users, destinations...">
+        <a class="admin-user" href="settings.html">
+          <span class="avatar bg-coral">AJ</span>
+          <span>Admin Jelajah<small>Administrator</small></span>
+        </a>
+      </header>
+
+      <main class="admin-content">
+        <div class="admin-head">
+          <div>
+            <ul class="breadcrumb"><li><a href="tickets.html">Tickets &amp; packages</a></li><li>Add ticket</li></ul>
+            <h1>Add ticket</h1>
+            <p>Create an entrance ticket, day tour or holiday package.</p>
+          </div>
+        </div>
+
+        <form class="layout-aside-right" action="tickets.html">
+          <section class="card card-pad form-section">
+            <h2>Ticket details</h2>
+            <div class="form-grid form-grid--2">
+              <div><label class="label" for="t-dest">Destination</label><select class="select" id="t-dest" required><option value="">Choose destination</option><option>Borobudur Temple</option><option>Ubud &amp; Tegallalang</option><option>Mount Bromo</option><option>Gili Islands</option><option>Nusa Penida &amp; Kelingking</option><option>Kawah Ijen</option><option>Labuan Bajo &amp; Komodo</option><option>Lake Toba</option><option>Dieng Plateau</option><option>Mount Rinjani</option><option>Raja Ampat</option><option>Citarik River Rafting</option><option>Bunaken Marine Park</option><option>Tana Toraja</option></select></div>
+              <div><label class="label" for="t-type">Type</label><select class="select" id="t-type"><option>Entrance ticket</option><option>Day tour</option><option>Holiday package</option></select></div>
+              <div class="span-all"><label class="label" for="t-name">Ticket name</label><input class="input" id="t-name" placeholder="e.g. Full-day guided tour" required></div>
+              <div><label class="label" for="t-price">Price per person (Rp)</label><input class="input" id="t-price" type="number" min="0" placeholder="350000" required></div>
+              <div><label class="label" for="t-quota">Daily quota</label><input class="input" id="t-quota" type="number" min="1" placeholder="20" required></div>
+              <div><label class="label" for="t-dur">Duration</label><input class="input" id="t-dur" placeholder="1 day / 3D2N"></div>
+              <div><label class="label" for="t-meet">Meeting point</label><input class="input" id="t-meet" placeholder="Hotel pick-up"></div>
+              <div><label class="label" for="t-from">Valid from</label><input class="input" id="t-from" type="date"></div>
+              <div><label class="label" for="t-to">Valid until</label><input class="input" id="t-to" type="date"></div>
+              <div class="span-all"><label class="label" for="t-desc">Description</label><textarea class="textarea" id="t-desc" rows="4" placeholder="What travellers get with this ticket"></textarea></div>
+              <div class="span-all"><label class="label" for="t-inc">Included (one per line)</label><textarea class="textarea" id="t-inc" rows="4" placeholder="Entrance fee&#10;Local guide&#10;Mineral water"></textarea></div>
+            </div>
+          </section>
+
+          <aside class="card card-pad">
+            <h2 style="font-size:20px">Status</h2>
+            <label class="option" style="margin-bottom:10px"><input type="radio" name="status" checked><span><span class="option__title">Active</span><br><span class="option__desc">Can be booked now</span></span></label>
+            <label class="option" style="margin-bottom:16px"><input type="radio" name="status"><span><span class="option__title">Inactive</span><br><span class="option__desc">Hidden from the tickets page</span></span></label>
+            <label class="check"><input type="checkbox" checked> Free cancellation up to 24 hours before</label>
+            <button class="btn btn--primary btn--block" type="submit" style="margin-top:20px">Save ticket</button>
+            <a class="btn btn--outline btn--block" href="tickets.html" style="margin-top:10px">Cancel</a>
+          </aside>
+        </form>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

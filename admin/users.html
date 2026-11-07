@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users · Admin — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="admin-body">
+  <div class="admin">
+    <aside class="admin-side">
+      <a class="logo" href="dashboard.html">JELAJAH.ID</a>
+      <p class="admin-side__label">Overview</p>
+      <nav class="admin-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+      <p class="admin-side__label">Catalog</p>
+      <nav class="admin-nav">
+        <a href="destinations.html">Destinations <span class="badge-count">14</span></a>
+        <a href="tickets.html">Tickets &amp; packages <span class="badge-count">25</span></a>
+        <a href="blog.html">Blog posts</a>
+      </nav>
+      <p class="admin-side__label">Transactions</p>
+      <nav class="admin-nav">
+        <a href="orders.html">Orders <span class="badge-count">2</span></a>
+      </nav>
+      <p class="admin-side__label">People</p>
+      <nav class="admin-nav">
+        <a href="users.html" class="is-active">Users</a>
+        <a href="messages.html">Messages <span class="badge-count">3</span></a>
+      </nav>
+      <p class="admin-side__label">System</p>
+      <nav class="admin-nav">
+        <a href="settings.html">Settings</a>
+        <a href="../index.html">View website</a>
+        <a href="index.html">Sign out</a>
+      </nav>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-top">
+        <input class="input" type="search" placeholder="Search orders, users, destinations...">
+        <a class="admin-user" href="settings.html">
+          <span class="avatar bg-coral">AJ</span>
+          <span>Admin Jelajah<small>Administrator</small></span>
+        </a>
+      </header>
+
+      <main class="admin-content">
+        <div class="admin-head">
+          <div>
+            <h1>Users</h1>
+            <p>Travellers and staff accounts.</p>
+          </div>
+          <div class="btn-row" style="margin:0"><a class="btn btn--primary" href="user-form.html">+ Add user</a></div>
+        </div>
+
+        <form class="card admin-filters" data-table-filter>
+          <input class="input" type="search" placeholder="Name or email...">
+          <select class="select"><option>All roles</option><option>Admin</option><option>Editor</option><option>Customer</option></select>
+          <select class="select"><option>All status</option><option>Active</option><option>Suspended</option></select>
+          <button class="btn btn--primary" type="submit">Filter</button>
+        </form>
+
+        <section class="card">
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>User</th><th>Phone</th><th>Role</th><th>Bookings</th><th>Joined</th><th>Status</th><th>Actions</th></tr></thead>
+              <tbody>
+              <tr>
+                <td><div class="cell-main"><span class="avatar bg-coral">AJ</span><div><strong>Admin Jelajah</strong><small>admin@jelajah.id</small></div></div></td>
+                <td>+62 811 2000 100</td>
+                <td><span class="tag tag--soft" style="font-size:11px;padding:2px 10px">Admin</span></td>
+                <td>0</td>
+                <td>01 Jan 2026</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="user-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button">Suspend</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><span class="avatar bg-teal">NR</span><div><strong>Nadia Rahma</strong><small>nadia@jelajah.id</small></div></div></td>
+                <td>+62 811 2000 101</td>
+                <td><span class="tag tag--info" style="font-size:11px;padding:2px 10px">Editor</span></td>
+                <td>0</td>
+                <td>15 Feb 2026</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="user-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button">Suspend</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><span class="avatar bg-blue">RP</span><div><strong>Rizky Pratama</strong><small>rizky.pratama@mail.com</small></div></div></td>
+                <td>+62 812 3456 7890</td>
+                <td><span class="tag tag--muted" style="font-size:11px;padding:2px 10px">Customer</span></td>
+                <td>4</td>
+                <td>12 Mar 2026</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="user-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button">Suspend</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><span class="avatar bg-purple">SN</span><div><strong>Siti Nurhaliza</strong><small>siti.nur@mail.com</small></div></div></td>
+                <td>+62 813 2211 4455</td>
+                <td><span class="tag tag--muted" style="font-size:11px;padding:2px 10px">Customer</span></td>
+                <td>3</td>
+                <td>02 Apr 2026</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="user-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button">Suspend</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><span class="avatar bg-coral">AS</span><div><strong>Andi Saputra</strong><small>andi.saputra@mail.com</small></div></div></td>
+                <td>+62 857 1100 2233</td>
+                <td><span class="tag tag--muted" style="font-size:11px;padding:2px 10px">Customer</span></td>
+                <td>2</td>
+                <td>19 Apr 2026</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="user-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button">Suspend</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><span class="avatar bg-teal">DL</span><div><strong>Dewi Lestari</strong><small>dewi.lestari@mail.com</small></div></div></td>
+                <td>+62 878 9900 1122</td>
+                <td><span class="tag tag--muted" style="font-size:11px;padding:2px 10px">Customer</span></td>
+                <td>5</td>
+                <td>08 May 2026</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="user-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button">Suspend</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><span class="avatar bg-blue">BS</span><div><strong>Budi Santoso</strong><small>budi.santoso@mail.com</small></div></div></td>
+                <td>+62 812 7788 6655</td>
+                <td><span class="tag tag--muted" style="font-size:11px;padding:2px 10px">Customer</span></td>
+                <td>1</td>
+                <td>30 Jun 2026</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="user-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button">Suspend</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><span class="avatar bg-purple">MP</span><div><strong>Maya Putri</strong><small>maya.putri@mail.com</small></div></div></td>
+                <td>+62 821 4433 2211</td>
+                <td><span class="tag tag--muted" style="font-size:11px;padding:2px 10px">Customer</span></td>
+                <td>2</td>
+                <td>14 Jul 2026</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="user-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button">Suspend</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><span class="avatar bg-coral">IP</span><div><strong>Intan Permata</strong><small>intan.p@mail.com</small></div></div></td>
+                <td>+62 838 5566 7788</td>
+                <td><span class="tag tag--muted" style="font-size:11px;padding:2px 10px">Customer</span></td>
+                <td>1</td>
+                <td>22 Aug 2026</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="user-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button">Suspend</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><span class="avatar bg-teal">FH</span><div><strong>Fajar Hidayat</strong><small>fajar.h@mail.com</small></div></div></td>
+                <td>+62 819 3344 5566</td>
+                <td><span class="tag tag--muted" style="font-size:11px;padding:2px 10px">Customer</span></td>
+                <td>3</td>
+                <td>05 Sep 2026</td>
+                <td><span class="tag tag--success">Active</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="user-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button">Suspend</button></div></td>
+              </tr>
+              <tr>
+                <td><div class="cell-main"><span class="avatar bg-blue">AW</span><div><strong>Agus Wijaya</strong><small>agus.wijaya@mail.com</small></div></div></td>
+                <td>+62 852 6677 8899</td>
+                <td><span class="tag tag--muted" style="font-size:11px;padding:2px 10px">Customer</span></td>
+                <td>1</td>
+                <td>11 Oct 2026</td>
+                <td><span class="tag tag--danger">Suspended</span></td>
+                <td><div class="table-actions"><a class="btn btn--outline btn--xs" href="user-form.html">Edit</a><button class="btn btn--danger btn--xs" type="button">Activate</button></div></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination">
+            <span>Showing 11 of 1.284</span>
+            <nav><a href="#">&lsaquo;</a><a class="is-active" href="#">1</a><a href="#">&rsaquo;</a></nav>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

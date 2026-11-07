@@ -1,4 +1,4 @@
-/* Page interactions: accordion, tab/chip groups, quantity steppers, copy-to-clipboard. */
+/* Page interactions: accordion, tab/chip groups, quantity steppers, copy, filters, remove buttons. */
 (function () {
   document.querySelectorAll(".accordion__head").forEach(function (head) {
     head.addEventListener("click", function () {
@@ -34,6 +34,53 @@
       if (navigator.clipboard) navigator.clipboard.writeText(btn.getAttribute("data-copy"));
       btn.textContent = "Copied!";
       setTimeout(function () { btn.textContent = label; }, 1500);
+    });
+  });
+
+  // Status chips: show only items whose data-status contains the chosen filter.
+  document.querySelectorAll("[data-status-tabs]").forEach(function (group) {
+    var chips = group.querySelectorAll("[data-filter]");
+    chips.forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        var f = chip.getAttribute("data-filter");
+        chips.forEach(function (c) { c.classList.toggle("is-active", c === chip); });
+        document.querySelectorAll("[data-status]").forEach(function (el) {
+          var match = f === "all" || el.getAttribute("data-status").split(" ").indexOf(f) > -1;
+          el.classList.toggle("is-hidden", !match);
+        });
+      });
+    });
+  });
+
+  // Admin filter bar: search text + every select (except "All ...") must appear in the row.
+  document.querySelectorAll("[data-table-filter]").forEach(function (form) {
+    var rows = document.querySelectorAll(".table tbody tr");
+    function apply() {
+      var terms = [];
+      form.querySelectorAll("input[type=search], select").forEach(function (f) {
+        var v = f.value.trim().toLowerCase();
+        if (v && v.indexOf("all ") !== 0) terms.push(v);
+      });
+      rows.forEach(function (row) {
+        var text = row.textContent.toLowerCase();
+        row.classList.toggle("is-hidden", !terms.every(function (t) { return text.indexOf(t) > -1; }));
+      });
+    }
+    form.addEventListener("input", apply);
+    form.addEventListener("submit", function (e) { e.preventDefault(); apply(); });
+  });
+
+  document.querySelectorAll("[data-remove]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var item = btn.closest(btn.getAttribute("data-remove") || "tr");
+      if (item && confirm("Remove this item?")) item.remove();
+    });
+  });
+
+  document.querySelectorAll("[data-mark-read]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var badge = btn.closest("details").querySelector("[data-new]");
+      if (badge) badge.remove();
     });
   });
 

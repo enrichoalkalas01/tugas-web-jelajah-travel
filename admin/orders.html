@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orders · Admin — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="admin-body">
+  <div class="admin">
+    <aside class="admin-side">
+      <a class="logo" href="dashboard.html">JELAJAH.ID</a>
+      <p class="admin-side__label">Overview</p>
+      <nav class="admin-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+      <p class="admin-side__label">Catalog</p>
+      <nav class="admin-nav">
+        <a href="destinations.html">Destinations <span class="badge-count">14</span></a>
+        <a href="tickets.html">Tickets &amp; packages <span class="badge-count">25</span></a>
+        <a href="blog.html">Blog posts</a>
+      </nav>
+      <p class="admin-side__label">Transactions</p>
+      <nav class="admin-nav">
+        <a href="orders.html" class="is-active">Orders <span class="badge-count">2</span></a>
+      </nav>
+      <p class="admin-side__label">People</p>
+      <nav class="admin-nav">
+        <a href="users.html">Users</a>
+        <a href="messages.html">Messages <span class="badge-count">3</span></a>
+      </nav>
+      <p class="admin-side__label">System</p>
+      <nav class="admin-nav">
+        <a href="settings.html">Settings</a>
+        <a href="../index.html">View website</a>
+        <a href="index.html">Sign out</a>
+      </nav>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-top">
+        <input class="input" type="search" placeholder="Search orders, users, destinations...">
+        <a class="admin-user" href="settings.html">
+          <span class="avatar bg-coral">AJ</span>
+          <span>Admin Jelajah<small>Administrator</small></span>
+        </a>
+      </header>
+
+      <main class="admin-content">
+        <div class="admin-head">
+          <div>
+            <h1>Orders</h1>
+            <p>All bookings made by travellers.</p>
+          </div>
+          <div class="btn-row" style="margin:0"><button class="btn btn--outline" type="button">Export CSV</button></div>
+        </div>
+
+        <div class="link-tabs" data-status-tabs>
+          <button class="chip is-active" type="button" data-filter="all">All (12)</button>
+          <button class="chip" type="button" data-filter="pending">Pending payment (2)</button>
+          <button class="chip" type="button" data-filter="confirmed">Confirmed (5)</button>
+          <button class="chip" type="button" data-filter="completed">Completed (3)</button>
+          <button class="chip" type="button" data-filter="cancelled">Cancelled (2)</button>
+        </div>
+
+        <form class="card admin-filters" data-table-filter>
+          <input class="input" type="search" placeholder="Booking code or customer...">
+          <select class="select"><option>All payment methods</option><option>Bank transfer</option><option>Virtual account</option><option>Credit card</option><option>E-wallet</option></select>
+          <input class="input" type="date" aria-label="From date">
+          <input class="input" type="date" aria-label="To date">
+          <button class="btn btn--primary" type="submit">Filter</button>
+        </form>
+
+        <section class="card">
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>Code</th><th>Customer</th><th>Item</th><th>Visit date</th><th>Guests</th><th>Total</th><th>Payment</th><th>Status</th><th></th></tr></thead>
+              <tbody>
+              <tr data-status="confirmed">
+                <td><a href="order-detail.html"><strong>JLJ-GFUOT6</strong></a><br><small>03 Nov 2026</small></td>
+                <td>Rizky Pratama</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/borobudur-temple/01.jpg" alt=""><div><strong>Borobudur Temple</strong><small>Entrance ticket</small></div></div></td>
+                <td>Sat, 21 Nov 2026</td>
+                <td>2</td>
+                <td><span class="price">Rp 100.000</span></td>
+                <td>Bank transfer</td>
+                <td><span class="tag tag--success">Confirmed</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              <tr data-status="pending">
+                <td><a href="order-detail.html"><strong>JLJ-K8Q2ZP</strong></a><br><small>07 Nov 2026</small></td>
+                <td>Rizky Pratama</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/mount-bromo/01.jpg" alt=""><div><strong>Mount Bromo</strong><small>Full-day guided tour</small></div></div></td>
+                <td>Sat, 28 Nov 2026</td>
+                <td>2</td>
+                <td><span class="price">Rp 720.000</span></td>
+                <td>Virtual account</td>
+                <td><span class="tag tag--warning">Pending payment</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              <tr data-status="confirmed">
+                <td><a href="order-detail.html"><strong>JLJ-M3R7TA</strong></a><br><small>06 Nov 2026</small></td>
+                <td>Siti Nurhaliza</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/raja-ampat/09.jpg" alt=""><div><strong>Raja Ampat</strong><small>4D3N holiday package</small></div></div></td>
+                <td>Sat, 12 Dec 2026</td>
+                <td>2</td>
+                <td><span class="price">Rp 15.300.000</span></td>
+                <td>Credit card</td>
+                <td><span class="tag tag--success">Confirmed</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              <tr data-status="confirmed">
+                <td><a href="order-detail.html"><strong>JLJ-P5W1LD</strong></a><br><small>06 Nov 2026</small></td>
+                <td>Andi Saputra</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/nusa-penida-kelingking/02.jpg" alt=""><div><strong>Nusa Penida &amp; Kelingking</strong><small>3D2N holiday package</small></div></div></td>
+                <td>Fri, 20 Nov 2026</td>
+                <td>3</td>
+                <td><span class="price">Rp 8.700.000</span></td>
+                <td>Virtual account</td>
+                <td><span class="tag tag--success">Confirmed</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              <tr data-status="confirmed">
+                <td><a href="order-detail.html"><strong>JLJ-B9X4NE</strong></a><br><small>05 Nov 2026</small></td>
+                <td>Dewi Lestari</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/kawah-ijen/02.jpg" alt=""><div><strong>Kawah Ijen</strong><small>Entrance ticket</small></div></div></td>
+                <td>Sat, 14 Nov 2026</td>
+                <td>4</td>
+                <td><span class="price">Rp 340.000</span></td>
+                <td>E-wallet</td>
+                <td><span class="tag tag--success">Confirmed</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              <tr data-status="pending">
+                <td><a href="order-detail.html"><strong>JLJ-H2C6VU</strong></a><br><small>05 Nov 2026</small></td>
+                <td>Budi Santoso</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/labuan-bajo-komodo/01.jpg" alt=""><div><strong>Labuan Bajo &amp; Komodo</strong><small>3D2N holiday package</small></div></div></td>
+                <td>Sat, 05 Dec 2026</td>
+                <td>2</td>
+                <td><span class="price">Rp 8.330.000</span></td>
+                <td>Bank transfer</td>
+                <td><span class="tag tag--warning">Pending payment</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              <tr data-status="confirmed">
+                <td><a href="order-detail.html"><strong>JLJ-Z3V5XC</strong></a><br><small>04 Nov 2026</small></td>
+                <td>Intan Permata</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/mount-rinjani/01.jpg" alt=""><div><strong>Mount Rinjani</strong><small>3D2N holiday package</small></div></div></td>
+                <td>Thu, 10 Dec 2026</td>
+                <td>2</td>
+                <td><span class="price">Rp 6.400.000</span></td>
+                <td>Credit card</td>
+                <td><span class="tag tag--success">Confirmed</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              <tr data-status="completed">
+                <td><a href="order-detail.html"><strong>JLJ-T7J3QS</strong></a><br><small>28 Oct 2026</small></td>
+                <td>Maya Putri</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/ubud-tegallalang/14.jpg" alt=""><div><strong>Ubud &amp; Tegallalang</strong><small>Entrance ticket</small></div></div></td>
+                <td>Mon, 02 Nov 2026</td>
+                <td>2</td>
+                <td><span class="price">Rp 30.000</span></td>
+                <td>E-wallet</td>
+                <td><span class="tag tag--info">Completed</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              <tr data-status="cancelled">
+                <td><a href="order-detail.html"><strong>JLJ-Y8E4RW</strong></a><br><small>25 Oct 2026</small></td>
+                <td>Agus Wijaya</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/tana-toraja/04.jpg" alt=""><div><strong>Tana Toraja</strong><small>Entrance ticket</small></div></div></td>
+                <td>Sun, 01 Nov 2026</td>
+                <td>3</td>
+                <td><span class="price">Rp 90.000</span></td>
+                <td>Virtual account</td>
+                <td><span class="tag tag--danger">Cancelled</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              <tr data-status="completed">
+                <td><a href="order-detail.html"><strong>JLJ-W6N2HB</strong></a><br><small>20 Oct 2026</small></td>
+                <td>Fajar Hidayat</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/dieng-plateau/01.jpg" alt=""><div><strong>Dieng Plateau</strong><small>Entrance ticket</small></div></div></td>
+                <td>Sun, 25 Oct 2026</td>
+                <td>5</td>
+                <td><span class="price">Rp 125.000</span></td>
+                <td>E-wallet</td>
+                <td><span class="tag tag--info">Completed</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              <tr data-status="cancelled">
+                <td><a href="order-detail.html"><strong>JLJ-D1L9GM</strong></a><br><small>01 Oct 2026</small></td>
+                <td>Rizky Pratama</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/gili-islands/01.jpg" alt=""><div><strong>Gili Islands</strong><small>Free entry + harbour fee</small></div></div></td>
+                <td>Sat, 10 Oct 2026</td>
+                <td>2</td>
+                <td><span class="price">Rp 30.000</span></td>
+                <td>Bank transfer</td>
+                <td><span class="tag tag--danger">Cancelled</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              <tr data-status="completed">
+                <td><a href="order-detail.html"><strong>JLJ-R4F8YK</strong></a><br><small>02 Sep 2026</small></td>
+                <td>Rizky Pratama</td>
+                <td><div class="cell-main"><img class="thumb" src="../assets/img/lake-toba/01.jpg" alt=""><div><strong>Lake Toba</strong><small>3D2N holiday package</small></div></div></td>
+                <td>Fri, 18 Sep 2026</td>
+                <td>2</td>
+                <td><span class="price">Rp 3.900.000</span></td>
+                <td>Credit card</td>
+                <td><span class="tag tag--info">Completed</span></td>
+                <td><a class="btn btn--outline btn--xs" href="order-detail.html">Detail</a></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination">
+            <span>Showing 12 of 12</span>
+            <nav><a href="#">&lsaquo;</a><a class="is-active" href="#">1</a><a href="#">&rsaquo;</a></nav>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

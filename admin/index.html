@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin sign in — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <main class="admin-login">
+    <div class="card auth">
+      <div class="auth__visual" style="background-image:url('../assets/img/labuan-bajo-komodo/01.jpg')">
+        <h2>Jelajah.id Admin Panel</h2>
+        <p>Manage destinations, tickets, orders and users in one place.</p>
+      </div>
+
+      <div class="auth__form">
+        <a class="logo" href="../index.html" style="color:var(--primary)">JELAJAH.ID</a>
+        <form action="dashboard.html">
+          <h2>Sign in as admin</h2>
+          <label class="label" for="email">Email</label>
+          <input class="input" id="email" type="email" placeholder="admin@jelajah.id" required>
+          <label class="label" for="password">Password</label>
+          <input class="input" id="password" type="password" placeholder="Password" minlength="6" required>
+          <label class="check" style="margin-bottom:20px"><input type="checkbox" checked> Keep me signed in</label>
+          <button class="btn btn--primary btn--lg btn--block" type="submit">Sign In</button>
+        </form>
+        <a class="auth__guest" href="../index.html">&larr; Back to website</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

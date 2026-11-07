@@ -32,14 +32,14 @@
             <button class="tabs__item" type="button" data-auth="signup">Sign Up</button>
           </div>
 
-          <form data-auth-show="signin" action="my-bookings.html">
+          <form data-auth-show="signin" action="dashboard/index.html">
             <h2>Welcome back</h2>
             <input class="input" type="email" placeholder="Email" required>
             <input class="input" type="password" placeholder="Password (min. 6 characters)" minlength="6" required>
             <button class="btn btn--primary btn--lg btn--block" type="submit">Sign In</button>
           </form>
 
-          <form class="is-hidden" data-auth-show="signup" action="my-bookings.html">
+          <form class="is-hidden" data-auth-show="signup" action="dashboard/index.html">
             <h2>Create an account</h2>
             <input class="input" type="text" placeholder="Full name" required>
             <input class="input" type="email" placeholder="Email" required>
@@ -48,6 +48,7 @@
           </form>
 
           <a class="auth__guest" href="index.html">Continue as guest</a>
+          <a class="auth__guest" href="admin/index.html" style="margin-top:6px">Admin? Sign in to the admin panel</a>
         </div>
       </div>
     </div>

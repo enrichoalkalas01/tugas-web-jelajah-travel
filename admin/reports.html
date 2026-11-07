@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports · Admin — Jelajah.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="admin-body">
+  <div class="admin">
+    <aside class="admin-side">
+      <a class="logo" href="dashboard.html">JELAJAH.ID</a>
+      <p class="admin-side__label">Overview</p>
+      <nav class="admin-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reports.html" class="is-active">Reports</a>
+      </nav>
+      <p class="admin-side__label">Catalog</p>
+      <nav class="admin-nav">
+        <a href="destinations.html">Destinations <span class="badge-count">14</span></a>
+        <a href="tickets.html">Tickets &amp; packages <span class="badge-count">25</span></a>
+        <a href="blog.html">Blog posts</a>
+      </nav>
+      <p class="admin-side__label">Transactions</p>
+      <nav class="admin-nav">
+        <a href="orders.html">Orders <span class="badge-count">2</span></a>
+      </nav>
+      <p class="admin-side__label">People</p>
+      <nav class="admin-nav">
+        <a href="users.html">Users</a>
+        <a href="messages.html">Messages <span class="badge-count">3</span></a>
+      </nav>
+      <p class="admin-side__label">System</p>
+      <nav class="admin-nav">
+        <a href="settings.html">Settings</a>
+        <a href="../index.html">View website</a>
+        <a href="index.html">Sign out</a>
+      </nav>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-top">
+        <input class="input" type="search" placeholder="Search orders, users, destinations...">
+        <a class="admin-user" href="settings.html">
+          <span class="avatar bg-coral">AJ</span>
+          <span>Admin Jelajah<small>Administrator</small></span>
+        </a>
+      </header>
+
+      <main class="admin-content">
+        <div class="admin-head">
+          <div>
+            <h1>Reports</h1>
+            <p>Sales performance for Jun – Nov 2026.</p>
+          </div>
+          <div class="btn-row" style="margin:0"><button class="btn btn--outline" type="button">Export PDF</button></div>
+        </div>
+
+        <form class="card admin-filters">
+          <label class="label" style="align-self:center;margin:0">Period</label>
+          <input class="input" type="date" value="2026-06-01" aria-label="From date">
+          <input class="input" type="date" value="2026-11-30" aria-label="To date">
+          <select class="select"><option>All destinations</option><option>Borobudur Temple</option><option>Ubud &amp; Tegallalang</option><option>Mount Bromo</option><option>Gili Islands</option><option>Nusa Penida &amp; Kelingking</option><option>Kawah Ijen</option><option>Labuan Bajo &amp; Komodo</option><option>Lake Toba</option><option>Dieng Plateau</option><option>Mount Rinjani</option><option>Raja Ampat</option><option>Citarik River Rafting</option><option>Bunaken Marine Park</option><option>Tana Toraja</option></select>
+          <button class="btn btn--primary" type="submit">Apply</button>
+        </form>
+
+        <div class="grid grid-4">
+          <div class="card kpi"><small>Total revenue</small><strong>Rp 214,6 jt</strong><span>&#9650; 22% vs previous period</span></div>
+          <div class="card kpi"><small>Total bookings</small><strong>1.439</strong><span>&#9650; 18% vs previous period</span></div>
+          <div class="card kpi"><small>Average order</small><strong>Rp 149 rb</strong><span>&#9650; 3% vs previous period</span></div>
+          <div class="card kpi"><small>Cancellation rate</small><strong>4,2%</strong><span class="is-down">&#9650; 0,6% vs previous period</span></div>
+        </div>
+
+        <div class="grid grid-2" style="margin-top:24px">
+          <section class="card">
+            <div class="card-head"><h2>Revenue by product type</h2></div>
+            <ul class="rank">
+              <li><div><span>Holiday packages</span><small>Rp 31,2 jt &middot; 64%</small></div><div class="progress"><i style="width:64%"></i></div></li>
+              <li><div><span>Day tours</span><small>Rp 9,8 jt &middot; 20%</small></div><div class="progress"><i style="width:20%"></i></div></li>
+              <li><div><span>Entrance tickets</span><small>Rp 7,6 jt &middot; 16%</small></div><div class="progress"><i style="width:16%"></i></div></li>
+            </ul>
+          </section>
+          <section class="card">
+            <div class="card-head"><h2>Payment methods</h2></div>
+            <ul class="rank">
+              <li><div><span>Virtual account</span><small>38% of orders</small></div><div class="progress"><i style="width:38%"></i></div></li>
+              <li><div><span>Credit card</span><small>27% of orders</small></div><div class="progress"><i style="width:27%"></i></div></li>
+              <li><div><span>E-wallet</span><small>21% of orders</small></div><div class="progress"><i style="width:21%"></i></div></li>
+              <li><div><span>Bank transfer</span><small>14% of orders</small></div><div class="progress"><i style="width:14%"></i></div></li>
+            </ul>
+          </section>
+        </div>
+
+        <section class="card" style="margin-top:24px">
+          <div class="card-head"><h2>Monthly summary</h2></div>
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>Month</th><th>Bookings</th><th>Revenue</th><th>Average order</th></tr></thead>
+              <tbody>
+                <tr><td>Jun 2026</td><td>148</td><td>Rp 21,4 jt</td><td>Rp 145.000</td></tr>
+                <tr><td>Jul 2026</td><td>236</td><td>Rp 34,8 jt</td><td>Rp 147.000</td></tr>
+                <tr><td>Aug 2026</td><td>261</td><td>Rp 39,2 jt</td><td>Rp 150.000</td></tr>
+                <tr><td>Sep 2026</td><td>198</td><td>Rp 28,5 jt</td><td>Rp 144.000</td></tr>
+                <tr><td>Oct 2026</td><td>284</td><td>Rp 42,1 jt</td><td>Rp 148.000</td></tr>
+                <tr><td>Nov 2026</td><td>312</td><td>Rp 48,6 jt</td><td>Rp 156.000</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:24px">
+          <div class="card-head"><h2>Top destinations</h2></div>
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>#</th><th>Destination</th><th>Region</th><th>Revenue</th><th>Rating</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td><div class="cell-main"><img class="thumb" src="../assets/img/raja-ampat/09.jpg" alt=""><strong>Raja Ampat</strong></div></td><td>Papua</td><td>Rp 18,4 jt</td><td>&#9733; 4.98</td></tr>
+                <tr><td>2</td><td><div class="cell-main"><img class="thumb" src="../assets/img/labuan-bajo-komodo/01.jpg" alt=""><strong>Labuan Bajo &amp; Komodo</strong></div></td><td>Nusa Tenggara</td><td>Rp 12,5 jt</td><td>&#9733; 4.95</td></tr>
+                <tr><td>3</td><td><div class="cell-main"><img class="thumb" src="../assets/img/nusa-penida-kelingking/02.jpg" alt=""><strong>Nusa Penida &amp; Kelingking</strong></div></td><td>Bali</td><td>Rp 8,7 jt</td><td>&#9733; 4.96</td></tr>
+                <tr><td>4</td><td><div class="cell-main"><img class="thumb" src="../assets/img/mount-rinjani/01.jpg" alt=""><strong>Mount Rinjani</strong></div></td><td>Nusa Tenggara</td><td>Rp 6,4 jt</td><td>&#9733; 4.90</td></tr>
+                <tr><td>5</td><td><div class="cell-main"><img class="thumb" src="../assets/img/mount-bromo/01.jpg" alt=""><strong>Mount Bromo</strong></div></td><td>Java</td><td>Rp 3,6 jt</td><td>&#9733; 4.92</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
