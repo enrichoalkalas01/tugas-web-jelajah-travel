@@ -2,7 +2,7 @@
 .gitignore
 .dockerignore
 Dockerfile
-Jenkinsfile
+Jenkinsfile*
 values
 Reference
 template.html

@@ -1,12 +1,12 @@
-# Helm values (chart generic-app-vault) — Jelajah.id, static site served by nginx.
-# image.repository/tag and vaultRuntime.* are overridden by the pipeline (--set).
-appName: jelajah-id
+# Helm values (chart generic-app) — Jelajah.id, static site served by nginx.
+# appName, image.repository/tag and service.nodePort are overridden by the pipeline (--set).
+appName: jelajah-id-prod
 namespace: portofolio
 
 replicaCount: 1
 
 image:
-    repository: 192.168.20.21/endless_creative_corp/jelajah-id-prod
+    repository: 192.168.20.21/other/jelajah-id-prod
     tag: "latest"
     pullPolicy: Always
 
@@ -22,13 +22,13 @@ service:
     type: NodePort
     port: 8080
     targetPort: 8080
-    nodePort: 31160
+    nodePort: 31158
 
-# Disabled until a hostname is chosen. A blank host would collide with the
-# company profile, which already owns the catch-all "/" on this controller.
+# Disabled until a hostname is chosen. A blank host would collide with
+# portofolio-event-music-fe, which already owns the catch-all "/" on this controller.
 ingress:
     enabled: false
-    className: nginx-endlesscreative
+    className: nginx-endlessapp
     annotations: {}
     hosts:
         - host: "jelajah.example.com"

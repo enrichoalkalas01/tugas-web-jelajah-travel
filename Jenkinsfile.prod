@@ -1,0 +1,20 @@
+@Library('deployment-library@main') _
+
+// Jelajah.id — static HTML/CSS/JS served by nginx (portfolio). PRODUCTION.
+// For development → Jenkinsfile
+// deployPipeline: checkout → docker build → push Harbor → helm (chart generic-app). No Vault.
+
+deployPipeline(
+    gitRepository: 'https://github.com/enrichoalkalas01/tugas-web-jelajah-travel.git',
+    gitBranch: 'master',
+    gitCredentialsId: 'endlesscreative-credentials',
+
+    registryUrl: '192.168.20.21',
+    registryCredentialsId: 'harbor-credentials',
+    imageName: 'jelajah-id-prod',
+    imageFolder: 'other',
+
+    namespace: 'portofolio',
+    helmValuesFile: 'values/values.prod.yml',
+    servicePort: '31158',
+)
