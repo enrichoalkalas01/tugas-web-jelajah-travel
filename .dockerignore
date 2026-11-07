@@ -1,0 +1,12 @@
+.git
+.gitignore
+.dockerignore
+Dockerfile
+Jenkinsfile
+values
+Reference
+template.html
+assets/img/old
+assets/img/*.docx
+assets/img/*.csv
+assets/img/*.txt
